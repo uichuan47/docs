@@ -1,0 +1,1820 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
+    
+    
+      
+        <title>6.CSS 基础语法 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6b80c2a2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6css" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6.CSS 基础语法
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Dev_documents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dev_documents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dev_documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about_git/git/" class="md-nav__link">
+        1.关于Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../request_process/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+        2.网络请求流程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prac/prac/" class="md-nav__link">
+        3.practice
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML/reference/" class="md-nav__link">
+        4.references
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../html_doc/HTML%E6%89%8B%E5%86%8C/" class="md-nav__link">
+        5. 常用HTML标签
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          6.CSS 基础语法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        6.CSS 基础语法
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-css" class="md-nav__link">
+    1.1 CSS 选择器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1css" class="md-nav__link">
+    1.CSS 基础语法
+  </a>
+  
+    <nav class="md-nav" aria-label="1.CSS 基础语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-css_1" class="md-nav__link">
+    1.1 CSS 选择器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-css" class="md-nav__link">
+    1.2 css的引入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 颜色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4 背景
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 背景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-background-color" class="md-nav__link">
+    1.4.1 background-color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-background-image" class="md-nav__link">
+    1.4.2 background-image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143background-repeat" class="md-nav__link">
+    1.4.3background-repeat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144background-position" class="md-nav__link">
+    1.4.4background-position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145-background-attachment" class="md-nav__link">
+    1.4.5 background-attachment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1.5 边框
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 边框">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    1.5.1 边框样式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    1.5.2 边框宽度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153" class="md-nav__link">
+    1.5.3 边框颜色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154" class="md-nav__link">
+    1.5.4 圆角边框
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    更多
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    1.6 外边距
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    1.7 外边距合并
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    1.8 内边距
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    1.9 宽度和高度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    1.10 框模层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-css" class="md-nav__link">
+    1.11 CSS轮廓
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-css" class="md-nav__link">
+    1.12 CSS轮廓偏移
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-css" class="md-nav__link">
+    1.13 CSS文本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-css" class="md-nav__link">
+    1.14 CSS 文本对齐
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-css" class="md-nav__link">
+    1.15 CSS文字装饰
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-css" class="md-nav__link">
+    1.16 CSS 文本转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    1.17 文字间距
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    1.18 字体
+  </a>
+  
+    <nav class="md-nav" aria-label="1.18 字体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1181" class="md-nav__link">
+    1.18.1 字体样式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1182-google" class="md-nav__link">
+    1.18.2 Google字体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1183" class="md-nav__link">
+    1.18.3 字体属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#119-css" class="md-nav__link">
+    1.19 CSS 图标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#120-css" class="md-nav__link">
+    1.20 CSS 链接样式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#121-css" class="md-nav__link">
+    1.21 CSS 列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-css" class="md-nav__link">
+    1.22 CSS表格
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-css" class="md-nav__link">
+    1.1 CSS 选择器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1css" class="md-nav__link">
+    1.CSS 基础语法
+  </a>
+  
+    <nav class="md-nav" aria-label="1.CSS 基础语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-css_1" class="md-nav__link">
+    1.1 CSS 选择器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-css" class="md-nav__link">
+    1.2 css的引入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 颜色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4 背景
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 背景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-background-color" class="md-nav__link">
+    1.4.1 background-color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-background-image" class="md-nav__link">
+    1.4.2 background-image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143background-repeat" class="md-nav__link">
+    1.4.3background-repeat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144background-position" class="md-nav__link">
+    1.4.4background-position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145-background-attachment" class="md-nav__link">
+    1.4.5 background-attachment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1.5 边框
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 边框">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    1.5.1 边框样式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    1.5.2 边框宽度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153" class="md-nav__link">
+    1.5.3 边框颜色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154" class="md-nav__link">
+    1.5.4 圆角边框
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    更多
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    1.6 外边距
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    1.7 外边距合并
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    1.8 内边距
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    1.9 宽度和高度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    1.10 框模层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-css" class="md-nav__link">
+    1.11 CSS轮廓
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-css" class="md-nav__link">
+    1.12 CSS轮廓偏移
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-css" class="md-nav__link">
+    1.13 CSS文本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-css" class="md-nav__link">
+    1.14 CSS 文本对齐
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-css" class="md-nav__link">
+    1.15 CSS文字装饰
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-css" class="md-nav__link">
+    1.16 CSS 文本转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    1.17 文字间距
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    1.18 字体
+  </a>
+  
+    <nav class="md-nav" aria-label="1.18 字体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1181" class="md-nav__link">
+    1.18.1 字体样式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1182-google" class="md-nav__link">
+    1.18.2 Google字体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1183" class="md-nav__link">
+    1.18.3 字体属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#119-css" class="md-nav__link">
+    1.19 CSS 图标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#120-css" class="md-nav__link">
+    1.20 CSS 链接样式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#121-css" class="md-nav__link">
+    1.21 CSS 列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-css" class="md-nav__link">
+    1.22 CSS表格
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="6css">6.CSS 基础语法</h1>
+<p>CSS 规则集（rule-set）由选择器和声明块组成：</p>
+<p><img alt="image-20220817174109354" src="../assets/image-20220817174109354.png" /></p>
+<p>选择器指向您需要设置样式的 HTML 元素。</p>
+<p>声明块包含一条或多条用分号分隔的声明。</p>
+<p>每条声明都包含一个 CSS 属性名称和一个值，以冒号分隔。</p>
+<p>多条 CSS 声明用分号分隔，声明块用花括号括起来。</p>
+<h3 id="11-css">1.1 CSS 选择器</h3>
+<ul>
+<li>
+<p>元素选择器</p>
+<p><strong>元素选择器根据元素名称来选择 HTML 元素。</strong></p>
+<p>在这里，页面上的所有p元素都将居中对齐，并带有红色文本颜色：</p>
+<p><code>css
+p {
+  text-align: center;
+  color: red;
+}</code></p>
+</li>
+<li>
+<p>id选择器</p>
+<p>元素的 id 在页面中是唯一的，因此 id 选择器用于选择一个唯一的元素！</p>
+<p>要选择具有特定 id 的元素，<strong>请写一个井号（＃）</strong>，后跟该元素的 id。</p>
+<p>这条 CSS 规则将应用于 id="para1" 的 HTML 元素：</p>
+</li>
+<li>
+<p>类选择器</p>
+<p>类选择器选择有特定 class 属性的 HTML 元素。</p>
+<p>如需选择拥有特定 class 的元素，请<strong>写一个句点（.）字符</strong>，后面跟类名。</p>
+<p>在此例中，所有带有 class="center" 的 HTML 元素将为红色且居中对齐：</p>
+<p><code>css
+.center {
+  text-align: center;
+  color: red;
+}</code></p>
+</li>
+<li>
+<p>通用选择器</p>
+<p>通用选择器（*）选择页面上的所有的 HTML 元素。</p>
+<p>下面的 CSS 规则会影响页面上的每个 HTML 元素：</p>
+<p><code>css
+* {
+  text-align: center;
+  color: blue;
+}</code></p>
+</li>
+<li>
+<p>分组选择器</p>
+<p>选取所有具有相同样式定义的 HTML 元素。</p>
+<p>```css
+h1 {
+  text-align: center;
+  color: red;
+}</p>
+<p>h2 {
+  text-align: center;
+  color: red;
+}</p>
+<p>p {
+  text-align: center;
+  color: red;
+}
+```</p>
+<p><img alt="image-20220912104647067" src="../assets/image-20220912104647067.png" /></p>
+</li>
+</ul>
+<h2 id="1css">1.CSS 基础语法</h2>
+<p>CSS 规则集（rule-set）由选择器和声明块组成：</p>
+<p><img alt="image-20220817174109354" src="../assets/image-20220817174109354.png" /></p>
+<p>选择器指向您需要设置样式的 HTML 元素。</p>
+<p>声明块包含一条或多条用分号分隔的声明。</p>
+<p>每条声明都包含一个 CSS 属性名称和一个值，以冒号分隔。</p>
+<p>多条 CSS 声明用分号分隔，声明块用花括号括起来。</p>
+<h3 id="11-css_1">1.1 CSS 选择器</h3>
+<ul>
+<li>
+<p>元素选择器</p>
+<p><strong>元素选择器根据元素名称来选择 HTML 元素。</strong></p>
+<p>在这里，页面上的所有p元素都将居中对齐，并带有红色文本颜色：</p>
+<p><code>css
+p {
+  text-align: center;
+  color: red;
+}</code></p>
+</li>
+<li>
+<p>id选择器</p>
+<p>元素的 id 在页面中是唯一的，因此 id 选择器用于选择一个唯一的元素！</p>
+<p>要选择具有特定 id 的元素，<strong>请写一个井号（＃）</strong>，后跟该元素的 id。</p>
+<p>这条 CSS 规则将应用于 id="para1" 的 HTML 元素：</p>
+</li>
+<li>
+<p>类选择器</p>
+<p>类选择器选择有特定 class 属性的 HTML 元素。</p>
+<p>如需选择拥有特定 class 的元素，请<strong>写一个句点（.）字符</strong>，后面跟类名。</p>
+<p>在此例中，所有带有 class="center" 的 HTML 元素将为红色且居中对齐：</p>
+<p><code>css
+.center {
+  text-align: center;
+  color: red;
+}</code></p>
+</li>
+<li>
+<p>通用选择器</p>
+<p>通用选择器（*）选择页面上的所有的 HTML 元素。</p>
+<p>下面的 CSS 规则会影响页面上的每个 HTML 元素：</p>
+<p><code>css
+* {
+  text-align: center;
+  color: blue;
+}</code></p>
+</li>
+<li>
+<p>分组选择器</p>
+<p>选取所有具有相同样式定义的 HTML 元素。</p>
+<p>```css
+h1 {
+  text-align: center;
+  color: red;
+}</p>
+<p>h2 {
+  text-align: center;
+  color: red;
+}</p>
+<p>p {
+  text-align: center;
+  color: red;
+}
+```</p>
+<p><img alt="image-20220912104647067" src="../assets/image-20220912104647067.png" /></p>
+</li>
+</ul>
+<h3 id="12-css">1.2 css的引入</h3>
+<ul>
+<li>外部CSS</li>
+<li>内部CSS</li>
+<li>行内CSS</li>
+</ul>
+<p><strong>外部CSS</strong></p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;
+</code></pre>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>内部CSS</strong></p>
+<p>内部样式在html页面中head部分内的style元素内进行定义</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>行内CSS</strong></p>
+<p>使用行内样式，为单个元素应用唯一样式</p>
+<p>将style属性添加到相关元素</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1 style=&quot;color:blue;text-align:center;&quot;&gt;This is a heading&lt;/h1&gt;
+&lt;p style=&quot;color:red;&quot;&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="13">1.3 颜色</h3>
+<p><strong>CSS中可以使用颜色名来制定颜色</strong></p>
+<p><img alt="image-20220912105115680" src="../assets/image-20220912105115680.png" /></p>
+<ul>
+<li>
+<p>背景色 background-color</p>
+<p><code>&lt;h1 style="background-color:DodgerBlue;"&gt;China&lt;/h1&gt;
+&lt;p style="background-color:Tomato;"&gt;China is a great country!&lt;/p&gt;</code></p>
+</li>
+<li>
+<p>文本颜色</p>
+<p><code>html
+&lt;h1 style="color:Tomato;"&gt;China&lt;/h1&gt;
+&lt;p style="color:DodgerBlue;"&gt;China is a great country!&lt;/p&gt;
+&lt;p style="color:MediumSeaGreen;"&gt;China, officially the People's Republic of China...&lt;/p&gt;</code></p>
+<p><img alt="image-20220912105216870" src="../assets/image-20220912105216870.png" /></p>
+</li>
+<li>
+<p>边框颜色</p>
+<p><code>&lt;h1 style="border:2px solid Tomato;"&gt;Hello World&lt;/h1&gt;
+&lt;h1 style="border:2px solid DodgerBlue;"&gt;Hello World&lt;/h1&gt;
+&lt;h1 style="border:2px solid Violet;"&gt;Hello World&lt;/h1&gt;</code></p>
+<p><img alt="image-20220912105245560" src="../assets/image-20220912105245560.png" /></p>
+</li>
+</ul>
+<h3 id="14">1.4 背景</h3>
+<ul>
+<li>background-color</li>
+<li>background-image</li>
+<li>background-repeat</li>
+<li>background-attachment</li>
+<li>background-position</li>
+</ul>
+<h4 id="141-background-color"><strong>1.4.1 background-color</strong></h4>
+<p>该属性指定元素的背景色</p>
+<pre><code class="language-css">body {
+  background-color: lightblue;
+}
+</code></pre>
+<ul>
+<li>
+<p>opacity属性，调整不透明度</p>
+<p><code>css
+div {
+  background-color: green;
+  opacity: 0.3;
+}</code></p>
+<p><img alt="image-20220912111441956" src="../assets/image-20220912111441956.png" /></p>
+</li>
+</ul>
+<h4 id="142-background-image"><strong>1.4.2 background-image</strong></h4>
+<p>该属性指定元素背景的图像</p>
+<pre><code class="language-css">body {
+  background-image: url(&quot;paper.gif&quot;);
+}
+</code></pre>
+<p>使用背景图像时，请使用不会干扰文本的图像。</p>
+<p>还可以为特定元素设置背景图像，例如 p 元素：</p>
+<h4 id="143background-repeat"><strong>1.4.3background-repeat</strong></h4>
+<p>该属性在水平和垂直方向上都重复图像</p>
+<p>分别在x，y方向上重复</p>
+<pre><code class="language-css">body {
+  background-image: url(&quot;gradient_bg.png&quot;);
+  background-repeat: repeat-x;
+}
+
+</code></pre>
+<p><img alt="image-20220912111803702" src="../assets/image-20220912111803702.png" /></p>
+<pre><code class="language-css">body {
+  background-image: url(&quot;gradient_bg.png&quot;);
+}
+</code></pre>
+<h4 id="144background-position"><img alt="image-20220912111741056" src="../assets/image-20220912111741056.png" /><strong>1.4.4background-position</strong></h4>
+<p>设置图像的位置属性</p>
+<pre><code class="language-css">body {
+  background-image: url(&quot;tree.png&quot;);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+</code></pre>
+<h4 id="145-background-attachment"><strong>1.4.5 background-attachment</strong></h4>
+<p>属性指定背景图像是应该滚动还是固定的（不会随页面的其余部分一起滚动）</p>
+<pre><code class="language-css">body {
+  background-image: url(&quot;tree.png&quot;);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+</code></pre>
+<p>指定背景图像应随页面的其余部分一起滚动：</p>
+<pre><code class="language-css">body {
+  background-image: url(&quot;tree.png&quot;);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+}
+</code></pre>
+<h3 id="15">1.5 边框</h3>
+<p>边框属性允许指定</p>
+<ul>
+<li>样式</li>
+<li>宽度</li>
+<li>颜色</li>
+</ul>
+<h4 id="151">1.5.1 边框样式</h4>
+<ul>
+<li>dotted - 定义点线边框</li>
+<li>dashed 虚线边框</li>
+<li>solid 实线</li>
+<li>double 双边框</li>
+<li>groove 3d边框 坡口</li>
+<li>ridge 3d边框 脊线</li>
+<li>inset 3d inset边框</li>
+<li>outset 3d outset</li>
+<li>none 无边框</li>
+<li>hidden 隐藏边框</li>
+</ul>
+<p><code>border-style</code>属性可以设置1-4个值（用于上下左右）</p>
+<pre><code class="language-css">p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+</code></pre>
+<p><img alt="image-20220912112947390" src="../assets/image-20220912112947390.png" /></p>
+<h4 id="152">1.5.2 边框宽度</h4>
+<p><code>border-width</code>属性指定四个边框的宽度</p>
+<pre><code class="language-css">p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+} 
+
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+</code></pre>
+<p><img alt="image-20220912113400053" src="../assets/image-20220912113400053.png" /></p>
+<h4 id="153">1.5.3 边框颜色</h4>
+<p><code>border-color</code>属性用于设置四个边框的颜色</p>
+<p>如果未设置<code>border-color</code>，它将继承元素的颜色</p>
+<pre><code class="language-css">p.one {
+  border-style: solid;
+  border-color: red;
+}
+
+p.two {
+  border-style: solid;
+  border-color: green;
+}
+
+p.three {
+  border-style: dotted;
+  border-color: blue;
+}
+</code></pre>
+<p><img alt="image-20220912113708828" src="../assets/image-20220912113708828.png" /></p>
+<p>颜色的设置也可以用以下标准</p>
+<ul>
+<li>HEX</li>
+<li>RGB</li>
+<li>HSL</li>
+</ul>
+<h4 id="154">1.5.4 圆角边框</h4>
+<p><code>border-dadius</code>属性用于向元素添加圆角边框</p>
+<h4 id="_1">更多</h4>
+<ul>
+<li>
+<p>边框各边</p>
+<p><a href="https://www.w3school.com.cn/css/css_border_sides.asp">https://www.w3school.com.cn/css/css_border_sides.asp</a></p>
+</li>
+<li>
+<p>简写边框属性</p>
+<p><a href="https://www.w3school.com.cn/css/css_border_shorthand.asp">https://www.w3school.com.cn/css/css_border_shorthand.asp</a></p>
+</li>
+</ul>
+<h3 id="16">1.6 外边距</h3>
+<p><code>margin</code>属性用来在任何定义的边框之外，为元素周围创造空间</p>
+<p>用<code>margin</code>为每一侧指定外边距的属性</p>
+<ul>
+<li>margin-top</li>
+<li>margin-right</li>
+<li>margin-bottom</li>
+<li>margin-left</li>
+</ul>
+<p><strong>所有外边距属性都可以设置以下值</strong></p>
+<ul>
+<li>
+<p>auto</p>
+<p>浏览器来自动计算外边距，元素在其容器中水平居中</p>
+</li>
+<li>
+<p>length</p>
+<p>以px，pt，cm等单位指定外边距</p>
+</li>
+<li>
+<p>%</p>
+<p>包含元素宽度的百分比计算的外边距</p>
+</li>
+<li>
+<p>inherit</p>
+<p>从父元素继承外边距</p>
+</li>
+</ul>
+<h3 id="17">1.7 外边距合并</h3>
+<p>当两个垂直外边距相遇时，他们将形成一个外边距，<strong>合并后的外边距的高度等于发生两个合并的外边距的高度中的较大者</strong></p>
+<p><img alt="image-20220912144630194" src="../assets/image-20220912144630194.png" /></p>
+<p>当一个元素包涵在另一个元素中时，他们的上或下外边距也会发生合并</p>
+<p><img alt="image-20220912144730702" src="../assets/image-20220912144730702.png" /></p>
+<p><a href="https://www.w3school.com.cn/css/css_margin_collapse.asp"><strong>更多关于边距合并</strong></a></p>
+<h3 id="18">1.8 内边距</h3>
+<p><code>padding</code>属性用于定义边界内的元素周围生成空间</p>
+<p>css拥有用于为元素的每一侧指定内边距的属性</p>
+<ul>
+<li>padding-top</li>
+<li>padding-right</li>
+<li>padding-bottom</li>
+<li>padding-left</li>
+</ul>
+<p>简写</p>
+<pre><code class="language-css">div {
+  padding: 25px 50px 75px 100px;
+}
+</code></pre>
+<p><strong>内边距和元素宽度</strong></p>
+<p><code>width</code>属性指定元素内容区域的宽度，内容区域是元素（盒模型）的内边距、边框和外边距内的部分。</p>
+<h3 id="19">1.9 宽度和高度</h3>
+<p><code>height</code>和<code>width</code>属性用来设置元素的高度和宽度</p>
+<p>height 和 width 属性不包括内边距、边框或外边距。它设置的是元素内边距、边框以及外边距内的区域的高度或宽度。</p>
+<p>height 和 width 属性可以设置以下的值</p>
+<ul>
+<li>auto</li>
+<li>length</li>
+<li>%</li>
+<li>initial</li>
+<li>inherit</li>
+</ul>
+<h3 id="110">1.10 框模层</h3>
+<p>所有 HTML 元素都可以视为方框。在 CSS 中，在谈论设计和布局时，会使用术语“盒模型”或“框模型”。</p>
+<p>CSS 框模型实质上是一个包围每个 HTML 元素的框。它包括：外边距、边框、内边距以及实际的内容。</p>
+<p><img alt="image-20220912162325129" src="../assets/image-20220912162325129.png" /></p>
+<ul>
+<li>内容 </li>
+<li>内边距</li>
+<li>边框</li>
+<li>外边距</li>
+</ul>
+<h3 id="111-css">1.11 CSS轮廓</h3>
+<p>轮廓是在元素周围绘制的一条线，在边框之外，以凸显元素。</p>
+<p>⚠️注意：</p>
+<ul>
+<li>轮廓与边框不同</li>
+<li>轮廓是在元素边框之外绘制的，可能与其他内容重叠，</li>
+<li>轮廓也不是元素尺寸的一部分</li>
+<li>元素的总宽度和高度不受轮廓线宽度的影响</li>
+</ul>
+<p>使用<code>outline-style</code>属性指定轮廓的样子</p>
+<p><img alt="image-20220912162734506" src="../assets/image-20220912162734506.png" /></p>
+<h3 id="112-css">1.12 CSS轮廓偏移</h3>
+<p><code>outline-offset</code>属性在元素的轮廓与边框之间添加空间</p>
+<p>元素以及轮廓之间的空间是透明的</p>
+<h3 id="113-css">1.13 CSS文本</h3>
+<p><strong>文本颜色</strong></p>
+<p><code>color</code>属性用于设置文本的颜色</p>
+<ul>
+<li>颜色名</li>
+<li>十六进制</li>
+<li>RGB</li>
+</ul>
+<p><strong>文本颜色和背景色</strong></p>
+<p><code>background-color</code>和<code>color</code>属性</p>
+<h3 id="114-css">1.14 CSS 文本对齐</h3>
+<p><code>text-align</code>属性用于设置文本的水平对齐方式</p>
+<p>文本可以左对齐或右对齐，或居中对齐。</p>
+<pre><code class="language-css">h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+</code></pre>
+<p><strong>justify</strong></p>
+<p>当<code>text-align</code>属性的值设置为<code>justfy</code>后，</p>
+<p>将拉伸每一行，使每一行具有相等的宽度</p>
+<p><img alt="image-20220912163814472" src="../assets/image-20220912163814472.png" /></p>
+<p><strong>文本方向</strong></p>
+<p><code>direction</code>和<code>unicode-bidi</code>属性可以用于更改元素的文本方向</p>
+<p><strong>垂直对齐</strong></p>
+<p><code>vertical-align</code>属性设置元素的垂直对齐方式</p>
+<h3 id="115-css">1.15 CSS文字装饰</h3>
+<p><code>text-decoration</code>属性用于设置或删除文本装饰</p>
+<p><code>text-decoration:none;</code>通常用于从链接上删除下划线</p>
+<pre><code class="language-css">a {
+  text-decoration: none;
+}
+</code></pre>
+<p>一些<code>text-decoration</code>属性的值</p>
+<pre><code class="language-css">h1 {
+  text-decoration: overline;
+}
+
+h2 {
+  text-decoration: line-through;
+}
+
+h3 {
+  text-decoration: underline;
+}
+</code></pre>
+<p><img alt="image-20220912164227732" src="../assets/image-20220912164227732.png" /></p>
+<h3 id="116-css">1.16 CSS 文本转换</h3>
+<p><code>text-transform</code>属性用来指定文本中的大小写转换·</p>
+<pre><code class="language-css">p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+</code></pre>
+<h3 id="117">1.17 文字间距</h3>
+<p><code>text-indent</code>属性用于指定文本第一行的缩进</p>
+<pre><code class="language-css">p {
+  text-indent: 50px;
+}
+</code></pre>
+<p><code>letter-spacing</code>属性用于指定文本中字符的间距</p>
+<pre><code>h1 {
+  letter-spacing: 3px;
+}
+
+h2 {
+  letter-spacing: -3px;
+}
+</code></pre>
+<p><code>line-height</code>属性用于指定行之间的间距</p>
+<pre><code class="language-css">p.small {
+  line-height: 0.8;
+}
+
+p.big {
+  line-height: 1.8;
+}
+</code></pre>
+<p><code>word-spacing</code>属性用于指定文本中单词之间的间距</p>
+<pre><code class="language-css">h1 {
+  word-spacing: 10px;
+}
+
+h2 {
+  word-spacing: -5px;
+}
+</code></pre>
+<p><code>white-space</code>属性指定元素内部空白的处理方式</p>
+<pre><code class="language-css">p {
+  white-space: nowrap;
+}
+</code></pre>
+<h3 id="118">1.18 字体</h3>
+<p><code>font-family</code>属性</p>
+<pre><code class="language-css">.p1 {
+  font-family: &quot;Times New Roman&quot;, Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: &quot;Lucida Console&quot;, &quot;Courier New&quot;, monospace;
+}
+</code></pre>
+<p><img alt="image-20220912171157614" src="../assets/image-20220912171157614.png" /></p>
+<h4 id="1181">1.18.1 字体样式</h4>
+<p><code>font-style</code></p>
+<ul>
+<li>nomal</li>
+<li>italic 斜体</li>
+<li>oblique 倾斜</li>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-css">p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+</code></pre>
+<p><code>font-weight</code>字体粗细</p>
+<pre><code class="language-css">p.normal {
+  font-weight: normal;
+}
+
+p.thick {
+  font-weight: bold;
+}
+</code></pre>
+<p><code>font-size</code>字体大小</p>
+<ul>
+<li>绝对尺寸<ul>
+<li>设置为指定大小</li>
+<li>不允许更改（在浏览器端）</li>
+</ul>
+</li>
+<li>相对尺寸<ul>
+<li>设置相对于周围元素的大小</li>
+<li>允许用户在浏览器中修改大小</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-css">h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+</code></pre>
+<h4 id="1182-google">1.18.2 Google字体</h4>
+<h4 id="_2"></h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Sofia&quot;&gt;
+&lt;style&gt;
+body {
+  font-family: &quot;Sofia&quot;;
+  font-size: 22px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Sofia Font&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="1183">1.18.3 字体属性</h4>
+<p><code>font</code>属性是以下属性的简写</p>
+<ul>
+<li>font-style</li>
+<li>font-variant</li>
+<li>font-weight</li>
+<li>font-size</li>
+<li>font-family</li>
+</ul>
+<h3 id="119-css">1.19 CSS 图标</h3>
+<ul>
+<li>
+<p>Font Awesome</p>
+<p>如需使用 Font Awesome 图标，请访问 fontawesome.com，登录并获取代码添加到 HTML 页面的 head部分</p>
+</li>
+</ul>
+<h3 id="120-css">1.20 CSS 链接样式</h3>
+<p>链接可以使用任何 CSS 属性（例如 <code>color</code>、<code>font-family</code>、<code>background</code> 等）来设置样式。</p>
+<pre><code class="language-css">a {
+  color: hotpink;
+}
+</code></pre>
+<p>几种链接状态</p>
+<pre><code class="language-css">/* 未被访问的链接 */
+a:link {
+  color: red;
+}
+
+/* 已被访问的链接 */
+a:visited {
+  color: green;
+}
+
+/* 将鼠标悬停在链接上 */
+a:hover {
+  color: hotpink;
+}
+
+/* 被选择的链接 */
+a:active {
+  color: blue;
+}
+</code></pre>
+<h3 id="121-css">1.21 CSS 列表</h3>
+<p>HTML中有两种列表</p>
+<ul>
+<li>无序列表ul</li>
+<li>有序列表ol</li>
+</ul>
+<p><a href="https://www.w3school.com.cn/css/css_list.asp">详情猛戳这里🎈</a></p>
+<h3 id="122-css">1.22 CSS表格</h3>
+<p>使用CSS可以极大的改善HTML表格的外观</p>
+<p><code>border</code>属性</p>
+<pre><code class="language-css">table, th, td {
+  border: 1px solid black;
+}
+</code></pre>
+<p><code>boder-collapse</code>合并表格边框，设置是否将表格边框折叠为单一边框</p>
+<pre><code class="language-css">table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+</code></pre>
+<p><code>width</code>和<code>height</code>设置表格的宽度和高度</p>
+<pre><code class="language-css">table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
+</code></pre>
+<pre><code class="language-css">table {
+  width: 50%;
+}
+
+th {
+  height: 70px;
+}
+</code></pre>
+<p><code>text-align</code>设置表格内容的水平对齐方式</p>
+<pre><code class="language-css">th {
+  text-align: center;
+}
+</code></pre>
+<p><code>vertical-align</code>设置垂直对齐方式</p>
+<pre><code class="language-css">td {
+  height: 50px;
+  vertical-align: bottom;
+}
+</code></pre>
+<p><code>padding</code>属性用来控制边框和表格内容之间的内边距</p>
+<pre><code class="language-css">th, td {
+  padding: 15px;
+  text-align: left;
+}
+</code></pre>
+<p><code>border-bottom</code>水平分割线</p>
+<pre><code class="language-css">th, td {
+  border-bottom: 1px solid #ddd;
+}
+</code></pre>
+<p><img alt="image-20220912173117311" src="../assets/image-20220912173117311.png" /></p>
+<p><code>:hover</code>悬停效果</p>
+<pre><code class="language-css">tr:hover {background-color: #f5f5f5;}
+</code></pre>
+<p><strong>表格颜色</strong></p>
+<pre><code class="language-css">th {
+  background-color: #4CAF50;
+  color: white;
+}
+</code></pre>
+<p><code>overflow-x:auto</code>响应式表格</p>
+<p>如果屏幕太小而无法显示全部内容，则响应式表格会显示水平滚动条：</p>
+<pre><code class="language-css">&lt;div style=&quot;overflow-x:auto;&quot;&gt;
+
+&lt;table&gt;
+... table content ...
+&lt;/table&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p><a href="https://www.w3school.com.cn/css/css_table.asp">更多细节猛戳这里🎈</a></p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../html_doc/HTML%E6%89%8B%E5%86%8C/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5. 常用HTML标签" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              5. 常用HTML标签
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.2ab50757.min.js"></script>
+      
+    
+  </body>
+</html>
