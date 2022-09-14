@@ -15,3 +15,6 @@ nav:
       - Dev_documents/pycharm_ad/pc_help.md
   - Django:
       - Django/hello.md
+
+  - project:
+      - project/tables/tables.md
