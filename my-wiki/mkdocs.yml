@@ -16,6 +16,8 @@ nav:
       - Dev_documents/pycharm_ad/pc_help.md
   - Django:
       - Django/hello.md
+      - Django/message/message.md
+      - Django/restframework_permission/restframework_permission.md
 
   - project:
       - project/tables/tables.md
