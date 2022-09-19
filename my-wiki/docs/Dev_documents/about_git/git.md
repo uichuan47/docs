@@ -197,8 +197,7 @@ git reset HEAD 文件名
 
 其余部分通过一个指针指向之前的版本
 
-<img src="assets/image-20220904193546735.png" alt="image-20220904193546735" style="zoom:33%;" />
-
+![image-20220904193546735.png](assets/image-20220904193546735.png)
 
 
 #### 2.1 生成新的分支
