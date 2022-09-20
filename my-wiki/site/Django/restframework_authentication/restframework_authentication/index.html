@@ -13,7 +13,7 @@
     
     
       
-        <title>1.表结构设计测试（v1） - My Docs</title>
+        <title>2.restframework认证组件 - My Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1v1" class="md-skip">
+        <a href="#2restframework" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1.表结构设计测试（v1）
+              2.restframework认证组件
             
           </span>
         </div>
@@ -352,12 +352,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -380,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Django/hello/" class="md-nav__link">
+      <a href="../../hello/" class="md-nav__link">
         Hello
       </a>
     </li>
@@ -394,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Django/message/message/" class="md-nav__link">
+      <a href="../../message/message/" class="md-nav__link">
         1.message组件
       </a>
     </li>
@@ -406,11 +408,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../Django/restframework_authentication/restframework_authentication/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.restframework认证组件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         2.restframework认证组件
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.前戏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 认证组件的应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.源码分析
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -422,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Django/restframework_permission/restframework_permission/" class="md-nav__link">
+      <a href="../../restframework_permission/restframework_permission/" class="md-nav__link">
         3.restframework权限组件
       </a>
     </li>
@@ -442,14 +499,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -470,21 +525,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../project/tables/tables/" class="md-nav__link">
         1.表结构设计测试（v1）
       </a>
-      
     </li>
   
 
@@ -516,6 +561,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.前戏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 认证组件的应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.源码分析
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -528,67 +602,214 @@
                 
 
 
-<h1 id="1v1">1.表结构设计测试（v1）</h1>
-<p><strong>所有表结构不涉及物理删除</strong></p>
-<pre><code class="language-python">class ActiveBaseModel(models.Model):
-    active = models.SmallIntegerField(verbose_name='状态', default=1, choices=((1, '激活'), (0, '删除'),))
-
-    class Meta:
-        abstract = True
-</code></pre>
-<p>这里的<code>ActiveBaseModel</code>类继承了<code>models.Model</code></p>
-<p>之后的建表的类将继承<code>ActiveBaseModel</code>类，同时继承<code>models.Model</code>和<code>ActiveBaseModel</code>中的方法和属性</p>
+<h1 id="2restframework">2.restframework认证组件</h1>
+<h3 id="1">1.前戏</h3>
+<p>restframework的认证authenticate组件帮助接口（API）进行<strong>身份认证</strong></p>
+<p>前戏不多，马上开始🎈</p>
+<h3 id="2">2. 认证组件的应用</h3>
 <ul>
-<li>管理员</li>
+<li>编写一个模块存储认证类</li>
 </ul>
-<pre><code class="language-python">class Administrator(models.Model):
-    username = models.CharField(verbose_name='管理员用户名', max_length=32, db_index=True)
-    password = models.CharField(verbose_name='管理员密码', max_length=64)
-    mobile = models.CharField(verbose_name='手机号', max_length=11)
-    email = models.CharField(verbose_name='邮箱', max_length=32, null=True, blank=True)
-    create_date = models.DateTimeField(verbose_name='创建日期', auto_now_add=True)
+<pre><code class="language-python">from rest_framework.authentication import BaseAuthentication
 
-    def __str__(self):
-        return self.username
+class MyAuthentication(BaseAuthentication):
+    def authenticate(self,request):
+        # 进行用户认证
+            # - 读取token
+            # - 检验token合法性
+            # - 返回
+                # - 返回元祖 （xx,oo） 元组中的两个值分别赋值给request.user 和 request.auth
+                # - 抛出异常  认证失败 -&gt; 返回错误信息
+                # - return None  多个认证类中[c1,c2,c3...] 去之后的类中
+                # - 如果所有的类都没有认证成功 -&gt; 匿名用户
+
+        pass            
+</code></pre>
+<p>获取token</p>
+<pre><code class="language-python">token = request._request.GET.get(&quot;token&quot;)
+token = request.query_params.get(&quot;token&quot;)
+</code></pre>
+<p><strong>认证类的模版</strong> (不能卸载view视图中，循环引用报错)</p>
+<pre><code class="language-python">from rest_framework.authentication import BaseAuthentication
+from rest_framework.exceptions import AuthenticationFailed
+
+
+class MyAuthentication(BaseAuthentication):
+    def authenticate(self,request):
+        token = request.query_params.get(&quot;token&quot;)
+        if token:
+            return (&quot;wupeiqi&quot;,token)
+
+        raise Authentication Failed(&quot;认证失败&quot;)
 </code></pre>
 <ul>
-<li>用户</li>
+<li>在视图函数中</li>
 </ul>
-<pre><code class="language-python">class Customer(ActiveBaseModel):
-    username = models.CharField(verbose_name='用户名', max_length=32, db_index=True)
-    password = models.CharField(verbose_name='密码', max_length=64)
-    mobile = models.CharField(verbose_name='手机号', max_length=11)
-    create_date = models.DateTimeField(verbose_name='创建日期', auto_now_add=True)
+<pre><code class="language-python">from ext.auth import MyAuthentication
 
-    def __str__(self):
-        return self.username
+class OrderView(APIView):
+    authentication_classes = [MyAuthentication,...]
+
+    def get(self,request):
+        ...
+        pass
 </code></pre>
 <ul>
-<li>文章</li>
+<li>配置文件中配置全局认证组件</li>
 </ul>
-<pre><code class="language-python">class Article(ActiveBaseModel):
-    title = models.CharField(verbose_name=&quot;标题&quot;, max_length=64)
-    author = models.ForeignKey(verbose_name='作者', to=&quot;Customer&quot;, on_delete=models.CASCADE)
-    create_date = models.DateTimeField(verbose_name='创建日期', auto_now_add=True)
-    content = models.CharField(verbose_name='内容', null=True, blank=True, max_length=256)
-    media_path = models.CharField(verbose_name='媒体路径', max_length=128)
-
-    def __str__(self):
-        return self.title
+<pre><code>REST_FRAMEWORK = {
+    &quot;UNAUTHENTICATED_USER&quot;: None,
+    # 值：[认证组件所在的路径] 全局所有的类都应用权限组件
+    &quot;DEFAULT_AUTHENTICATION_CLASSES&quot;: [
+        'ext.auth.QueryParamsAuthentication',
+        'ext.auth.HeaderAuthentication',
+        'ext.auth.NOAuthentication',
+    ],
+}
 </code></pre>
-<p>在此处先设计简单的表结构，</p>
-<p>测试版本中，需要满足的需求包括</p>
-<ul>
-<li>
-<p>用户登陆/注册</p>
-</li>
-<li>
-<p>用户&amp;管理员对内容的增删改查</p>
-</li>
-<li>
-<p>管理员数据查询</p>
-</li>
-</ul>
+<h3 id="3">3.源码分析</h3>
+<p>加载认证组件，本质就是实例化每个认证类的对象，并且封装到request对象中</p>
+<p>图太大了～🎈</p>
+<p><img alt="image-20220920004348105" src="../assets/image-20220920004348105.png" /></p>
+<p><img alt="image-20220920004452516" src="../assets/image-20220920004452516.png" /></p>
+<p><img alt="image-20220920004515503" src="../assets/image-20220920004515503.png" /></p>
+<pre><code class="language-python">class Request:
+    def __init__(self, request,authenticators=None):
+        self._request = request
+        self.authenticators = authenticators or ()
+
+    def _not_authenticated(self):
+        &quot;&quot;&quot;
+        Set authenticator, user &amp; authtoken representing an unauthenticated request.
+
+        Defaults are None, AnonymousUser &amp; None.
+        &quot;&quot;&quot;
+        self._authenticator = None
+        # 读取匿名用户 
+        if api_settings.UNAUTHENTICATED_USER:
+            self.user = api_settings.UNAUTHENTICATED_USER()
+        else:
+            self.user = None
+
+        if api_settings.UNAUTHENTICATED_TOKEN:
+            self.auth = api_settings.UNAUTHENTICATED_TOKEN()
+        else:
+            self.auth = None
+    def _authenticate(self):
+        &quot;&quot;&quot;
+        Attempt to authenticate the request using each authentication instance
+        in turn.
+        &quot;&quot;&quot;
+        # 认证组件对象组成的列表中循环
+        for authenticator in self.authenticators:
+            try:
+                # 执行认证组件对象的authenticate方法，self = request 对象
+                # 在此处执行了组件中的authenticate方法
+                user_auth_tuple = authenticator.authenticate(self)
+            except exceptions.APIException:
+                self._not_authenticated()
+                raise
+
+            if user_auth_tuple is not None:
+                self._authenticator = authenticator
+                # 封装到request.user,request.auth中，self = reqeust
+                # 复制过程中，会执行setter
+                self.user, self.auth = user_auth_tuple
+                return
+
+        self._not_authenticated()
+
+
+    @user.setter
+    def user(self, value):
+        &quot;&quot;&quot;
+        Sets the user on the current request. This is necessary to maintain
+        compatibility with django.contrib.auth where the user property is
+        set in the login and logout functions.
+
+        Note that we also set the user on Django's underlying `HttpRequest`
+        instance, ensuring that it is available to any middleware in the stack.
+        &quot;&quot;&quot;
+        self._user = value
+        self._request.user = value
+
+
+    @property
+    def user(self):
+        &quot;&quot;&quot;
+        Returns the user associated with the current request, as authenticated
+        by the authentication classes provided to the request.
+        &quot;&quot;&quot;
+        if not hasattr(self, '_user'):
+            with wrap_attributeerrors():
+                self._authenticate()
+        return self._user
+
+
+class APIView(View):
+
+    authentication_classes = api_settings.DEFAULT_AUTHENTICATION_CLASSES
+    def perform_authentication(self, request):
+        request.user
+    def initial(self, request, *args, **kwargs):
+
+        # Ensure that the incoming request is permitted
+        self.perform_authentication(request)
+        self.check_permissions(request)
+        self.check_throttles(request)
+    def get_authenticators(self):
+        # 对象列表，不同认证类实例化得到的对象
+        return [auth() for auth in self.authentication_classes]
+
+
+    def initialize_request(self, request, *args, **kwargs):
+
+        parser_context = self.get_parser_context(request)
+
+        return Request(
+            request,
+            parsers=self.get_parsers(),
+            authenticators=self.get_authenticators(),
+            negotiator=self.get_content_negotiator(),
+            parser_context=parser_context
+        )
+
+
+    def dispatch(self, request, *args, **kwargs):
+
+        self.args = args
+        self.kwargs = kwargs
+
+        # 请求的封装 (django的request +  authenticator认证组件) -&gt; 认证组件加载的过程
+        request = self.initialize_request(request, *args, **kwargs)
+        self.request = request
+        self.headers = self.default_response_headers  # deprecate?
+
+        # 
+        self.initial(request, *args, **kwargs)
+
+        # Get the appropriate handler method
+
+        handler = getattr(self, request.method.lower(),self.http_method_not_allowed)
+        handler = self.http_method_not_allowed
+        response = handler(request, *args, **kwargs)
+
+        self.response = self.finalize_response(request, response, *args, **kwargs)
+        return self.response
+
+
+
+
+class UserView(APIView):
+
+    def get(self, request):
+        print(request.user, request.auth)
+        return Response(&quot;...&quot;)
+
+# 请求到来时
+    obj = UserView()
+    obj.dispatch()
+</code></pre>
 
 
 
@@ -607,7 +828,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../../Django/restframework_permission/restframework_permission/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3.restframework权限组件" rel="prev">
+        <a href="../../message/message/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1.message组件" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -616,11 +837,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              3.restframework权限组件
+              1.message组件
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../../restframework_permission/restframework_permission/" class="md-footer__link md-footer__link--next" aria-label="Next: 3.restframework权限组件" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              3.restframework权限组件
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

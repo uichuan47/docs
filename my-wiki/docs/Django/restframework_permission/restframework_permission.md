@@ -1,4 +1,4 @@
-# 3.restframework权限组件
+# 4.restframework权限组件
 
 [官方文档🎈](https://www.django-rest-framework.org/community/third-party-packages/#permissions)
 

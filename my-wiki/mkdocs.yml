@@ -18,6 +18,7 @@ nav:
   - Django:
       - Django/hello.md
       - Django/message/message.md
+      - Django/requestObj/restframeworkRequestObj.md
       - Django/restframework_authentication/restframework_authentication.md
       - Django/restframework_permission/restframework_permission.md
 
