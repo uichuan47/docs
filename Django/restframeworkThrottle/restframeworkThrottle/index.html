@@ -13,7 +13,7 @@
     
     
       
-        <title>2.restframework Request对象 - My Docs</title>
+        <title>5.restframework 限流 - My Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2restframework-request" class="md-skip">
+        <a href="#5restframework" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.restframework Request对象
+              5.restframework 限流
             
           </span>
         </div>
@@ -408,79 +408,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2.restframework Request对象
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../requestObj/restframeworkRequestObj/" class="md-nav__link">
         2.restframework Request对象
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1.前戏：
-  </a>
-  
-    <nav class="md-nav" aria-label="1.前戏：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-opp" class="md-nav__link">
-    1.1 opp
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    1.2 分析
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.源码分析
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -518,11 +450,72 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../restframeworkThrottle/restframeworkThrottle/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.restframework 限流
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         5.restframework 限流
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.限流组件的应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 源码分析
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 源码分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1多个限流类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -610,35 +603,28 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1.前戏：
-  </a>
-  
-    <nav class="md-nav" aria-label="1.前戏：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-opp" class="md-nav__link">
-    1.1 opp
+    1.限流组件的应用
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 源码分析
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 源码分析">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    1.2 分析
+  <a href="#21" class="md-nav__link">
+    2.1多个限流类
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.源码分析
-  </a>
   
 </li>
       
@@ -656,140 +642,221 @@
                 
 
 
-<h1 id="2restframework-request">2.restframework Request对象</h1>
-<p>DRF中的request对象是对django中的request对象进行的再次封装</p>
-<h3 id="1">1.前戏：</h3>
-<h4 id="11-opp">1.1 opp</h4>
-<pre><code class="language-python">class Foo(object):
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-
-    def show(self):
-        return 123
-
-    def __getattr__(self,item):
-        print('----&gt;',item)
-        return 999
-</code></pre>
-<p><code>__getattr__</code>方法会在对象调用不存在的成员时触发</p>
-<pre><code class="language-python">class Foo(object):
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-
-    def show(self):
-        return 123
-
-    def __getattrbute__(self,item):
-        print('----&gt;',item)
-        return 999
-</code></pre>
-<p><code>__getattrbute__</code>将接管调用的操作，<code>object</code>基类中<code>__getattrbute__</code></p>
-<p>方法定义了基础的成员运算方法</p>
-<p>不论成员/方法是否存在，<code>__getattrbute__</code>都会执行。      </p>
-<p>在基类的<code>__getattrbute__</code>方法中，可以做如下操作</p>
+<h1 id="5restframework">5.restframework 限流</h1>
+<p>开发过程中，某个接口不希望用户访问过于频繁，采用限流的机制🎈</p>
+<h3 id="1">1.限流组件的应用</h3>
 <ul>
-<li>返回一些值</li>
-<li>
-<p>如果访问不存在的成员时，raise errro</p>
-</li>
-<li>
-<p>其他的处理规则</p>
-</li>
+<li>编写类</li>
+<li>应用类</li>
 </ul>
-<h4 id="12">1.2 分析</h4>
-<pre><code class="language-python">class HttpRequest(object):
-    def __init__(self):
-        pass
+<p><code>ext</code>中编写<code>throttle.py</code></p>
+<pre><code class="language-python">from rest_framework.throttling import BaseThrottle, SimpleRateThrottle
+from django.core.cache import cache as default_cache
 
-    def v1(self):
-        print('v1')
 
-    def v2(self):
-        print('v2')
+class MyThrottle(SimpleRateThrottle):
+    # 生成一个唯一标识
+    scope = &quot;XXX&quot;
+    THROTTLE_RATES = {'XXX': '5/m'}
+    cache = default_cache
 
-class Request(object):
-    def __init__(self,request,xx):
-        self._request = request
-        self.xx = xx
-    # 对象中有的成员，不会出发
-    # 对象中没有的成员，才会触发
-    def __getattr__(self, attr):
-        try:
-            # 对象中没有的成员，去参数中传入的对象找
-            # 这里的寻找方式自定义
-            return getattr(self._request, attr)
-        except AttributeError:
-            return self.__getattribute__(attr)
+    def get_cache_key(self, request, view):
+        if request.user:
+            ident = request.user.pk
+        else:
+            ident = self.get_ident(request)
+        return self.cache_format % {'scope': self.scope, 'ident': ident}
 
-request = HttpRequest()
-req.v1()
-req.v2()
-
-request. = Request(req,111)
-request.xx
-request._request.v1()
-request._request.v2()
 </code></pre>
-<p>前戏结束🎈</p>
-<h3 id="2">2.源码分析</h3>
-<pre><code class="language-python">class request:
+<p><code>settings</code>中配置缓存(启动<code>redis</code>服务)</p>
+<pre><code>pip install django-redis
+</code></pre>
+<pre><code class="language-python">CACHES = {
+    &quot;default&quot;: {
+        &quot;BACKEND&quot;: &quot;django_redis.cache.RedisCache&quot;,
+        &quot;LOCATION&quot;: &quot;redis://127.0.0.1:6379&quot;,
+        &quot;OPTIONS&quot;: {
+            &quot;CLIENT_CLASS&quot;: &quot;django_redis.client.DefaultClient&quot;,
+            &quot;PASSWORD&quot;: &quot;wycwyc1234&quot;,
+        }
+    }
+}
+</code></pre>
+<p>视图函数中应用</p>
+<pre><code class="language-python">class LoginView(APIView):
+    throttle_classes = [MyThrottle]
+    authentication_classes = []
+    ...
+    def post(self,request):
+        ...
+</code></pre>
+<h3 id="2">2. 源码分析</h3>
+<pre><code class="language-python">class SimpleRateThrottle(BaseThrottle):
 
-    def __init__(self, request, parsers=None, authenticators=None,
-                 negotiator=None, parser_context=None):
-        assert isinstance(request, HttpRequest), (
-            'The `request` argument must be an instance of '
-            '`django.http.HttpRequest`, not `{}.{}`.'
-            .format(request.__class__.__module__, request.__class__.__name__)
-        )
+    cache = default_cache
+    timer = time.time
+    cache_format = 'throttle_%(scope)s_%(ident)s'
+    scope = None
+    THROTTLE_RATES = api_settings.DEFAULT_THROTTLE_RATES
 
-        self._request = request
-        self.parsers = parsers or ()
-        self.authenticators = authenticators or ()
-        self.negotiator = negotiator or self._default_negotiator()
-        self.parser_context = parser_context
-        self._data = Empty
-        self._files = Empty
-        self._full_data = Empty
-        self._content_type = Empty
-        self._stream = Empty
+    def __init__(self):
+        if not getattr(self, 'rate', None):
+            self.rate = self.get_rate()
+        self.num_requests, self.duration = self.parse_rate(self.rate)
 
-        if self.parser_context is None:
-            self.parser_context = {}
-        self.parser_context['request'] = self
-        self.parser_context['encoding'] = request.encoding or settings.DEFAULT_CHARSET
+    def get_cache_key(self, request, view):
 
-        force_user = getattr(request, '_force_auth_user', None)
-        force_token = getattr(request, '_force_auth_token', None)
-        if force_user is not None or force_token is not None:
-            forced_auth = ForcedAuthentication(force_user, force_token)
-            self.authenticators = (forced_auth,)
+        raise NotImplementedError('.get_cache_key() must be overridden')
 
-    # 这里的__getattr__方法与前戏中的用法一致        
-    def __getattr__(self, attr):
+    def get_rate(self):
         &quot;&quot;&quot;
-        If an attribute does not exist on this instance, then we also attempt
-        to proxy it to the underlying HttpRequest object.
+        Determine the string representation of the allowed request rate.
         &quot;&quot;&quot;
+        if not getattr(self, 'scope', None):
+            msg = (&quot;You must set either `.scope` or `.rate` for '%s' throttle&quot; %
+                   self.__class__.__name__)
+            raise ImproperlyConfigured(msg)
+
         try:
-            return getattr(self._request, attr)
-        except AttributeError:
-            return self.__getattribute__(attr)
+            return self.THROTTLE_RATES[self.scope]
+        except KeyError:
+            msg = &quot;No default throttle rate set for '%s' scope&quot; % self.scope
+            raise ImproperlyConfigured(msg)
+
+    def parse_rate(self, rate):
+        &quot;&quot;&quot;
+        Given the request rate string, return a two tuple of:
+        &lt;allowed number of requests&gt;, &lt;period of time in seconds&gt;
+        &quot;&quot;&quot;
+        if rate is None:
+            return (None, None)
+        num, period = rate.split('/')
+        num_requests = int(num)
+        duration = {'s': 1, 'm': 60, 'h': 3600, 'd': 86400}[period[0]]
+        return (num_requests, duration)
+
+    def allow_request(self, request, view):
+        &quot;&quot;&quot;
+        Implement the check to see if the request should be throttled.
+
+        On success calls `throttle_success`.
+        On failure calls `throttle_failure`.
+        &quot;&quot;&quot;
+        if self.rate is None:
+            return True
+
+        self.key = self.get_cache_key(request, view)
+        if self.key is None:
+            return True
+
+        self.history = self.cache.get(self.key, [])
+        self.now = self.timer()
+
+        # Drop any requests from the history which have now passed the
+        # throttle duration
+        while self.history and self.history[-1] &lt;= self.now - self.duration:
+            self.history.pop()
+        if len(self.history) &gt;= self.num_requests:
+            return self.throttle_failure()
+        return self.throttle_success()
+
+    def throttle_success(self):
+        &quot;&quot;&quot;
+        Inserts the current request's timestamp along with the key
+        into the cache.
+        &quot;&quot;&quot;
+        self.history.insert(0, self.now)
+        self.cache.set(self.key, self.history, self.duration)
+        return True
+
+    def throttle_failure(self):
+        &quot;&quot;&quot;
+        Called when a request to the API has failed due to throttling.
+        &quot;&quot;&quot;
+        return False
+
+    def wait(self):
+        &quot;&quot;&quot;
+        Returns the recommended next request time in seconds.
+        &quot;&quot;&quot;
+        if self.history:
+            remaining_duration = self.duration - (self.now - self.history[-1])
+        else:
+            remaining_duration = self.duration
+
+        available_requests = self.num_requests - len(self.history) + 1
+        if available_requests &lt;= 0:
+            return None
+
+        return remaining_duration / float(available_requests)
 
 
-class APIView(View)
-    # dispatch中传入的request对象是django的request对象
+
+class MyThrottle(SimpleRateThrottle):
+    # 生成一个唯一标识
+    scope = &quot;XXX&quot;
+    THROTTLE_RATES = {'XXX': '5/m'}
+    cache = default_cache
+
+    def get_cache_key(self, request, view):
+        if request.user:
+            ident = request.user.pk
+        else:
+            ident = self.get_ident(request)
+        return self.cache_format % {'scope': self.scope, 'ident': ident}
+
+
+
+class APIView(View):
+    permission_classes = 全局配置
+
+    def check_throttles(self, request):
+        &quot;&quot;&quot;
+        Check if request should be throttled.
+        Raises an appropriate exception if the request is throttled.
+        &quot;&quot;&quot;
+        throttle_durations = []
+        # 限流类的对象列表
+        for throttle in self.get_throttles():
+            if not throttle.allow_request(request, self):
+                throttle_durations.append(throttle.wait())
+
+        if throttle_durations:
+            # Filter out `None` values which may happen in case of config / rate
+            # changes, see #1438
+            durations = [
+                duration for duration in throttle_durations
+                if duration is not None
+            ]
+
+            duration = max(durations, default=None)
+            self.throttled(request, duration)
+
+
+    def initial(self, request, *args, **kwargs):
+        &quot;&quot;&quot;
+        Runs anything that needs to occur prior to calling the method handler.
+        &quot;&quot;&quot;
+        self.format_kwarg = self.get_format_suffix(**kwargs)
+
+        # Perform content negotiation and store the accepted info on the request
+        neg = self.perform_content_negotiation(request)
+        request.accepted_renderer, request.accepted_media_type = neg
+
+        # Determine the API version, if versioning is in use.
+        version, scheme = self.determine_version(request, *args, **kwargs)
+        request.version, request.versioning_scheme = version, scheme
+
+        # Ensure that the incoming request is permitted
+        self.perform_authentication(request)
+        self.check_permissions(request)
+        self.check_throttles(request)
+
+
     def dispatch(self, request, *args, **kwargs):
-        &quot;&quot;&quot;
-        `.dispatch()` is pretty much the same as Django's regular dispatch,
-        but with extra hooks for startup, finalize, and exception handling.
-        &quot;&quot;&quot;
         self.args = args
         self.kwargs = kwargs
-        # 
         request = self.initialize_request(request, *args, **kwargs)
-        # 从此开始的request是经过drf封装过后的request
         self.request = request
         self.headers = self.default_response_headers  # deprecate?
 
@@ -798,12 +865,11 @@ class APIView(View)
 
             # Get the appropriate handler method
             if request.method.lower() in self.http_method_names:
-                # 通过反射获取get/post/put/delete等方法
                 handler = getattr(self, request.method.lower(),
                                   self.http_method_not_allowed)
             else:
                 handler = self.http_method_not_allowed
-            # 执行相应的方法
+
             response = handler(request, *args, **kwargs)
 
         except Exception as exc:
@@ -812,6 +878,14 @@ class APIView(View)
         self.response = self.finalize_response(request, response, *args, **kwargs)
         return self.response
 </code></pre>
+<p><img alt="restframework限流组件" src="../assets/restframework%E9%99%90%E6%B5%81%E7%BB%84%E4%BB%B6.png" /></p>
+<h4 id="21"><strong>2.1多个限流类</strong></h4>
+<p>本质，每个限流的类中都有一个 <code>allow_request</code> 方法，此方法内部可以有三种情况：</p>
+<ul>
+<li>返回True，表示当前限流类允许访问，继续执行后续的限流类。</li>
+<li>返回False，表示当前限流类不允许访问，继续执行后续的限流类。所有的限流类执行完毕后，读取所有不允许的限流，并计算还需等待的时间。</li>
+<li>抛出异常，表示当前限流类不允许访问，后续限流类不再执行。</li>
+</ul>
 
 
 
@@ -830,7 +904,7 @@ class APIView(View)
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../message/message/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1.message组件" rel="prev">
+        <a href="../../restframework_permission/restframework_permission/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4.restframework权限组件" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -839,20 +913,20 @@ class APIView(View)
               <span class="md-footer__direction">
                 Previous
               </span>
-              1.message组件
+              4.restframework权限组件
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../restframework_authentication/restframework_authentication/" class="md-footer__link md-footer__link--next" aria-label="Next: 3.restframework认证组件" rel="next">
+        <a href="../../../project/tables/tables/" class="md-footer__link md-footer__link--next" aria-label="Next: 1.表结构设计测试（v1）" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              3.restframework认证组件
+              1.表结构设计测试（v1）
             </div>
           </div>
           <div class="md-footer__button md-icon">
