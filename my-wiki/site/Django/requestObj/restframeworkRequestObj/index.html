@@ -13,7 +13,7 @@
     
     
       
-        <title>1.message组件 - My Docs</title>
+        <title>2.restframework Request对象 - My Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1message" class="md-skip">
+        <a href="#2restframework-request" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1.message组件
+              2.restframework Request对象
             
           </span>
         </div>
@@ -394,6 +394,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../message/message/" class="md-nav__link">
+        1.message组件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -406,12 +420,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          1.message组件
+          2.restframework Request对象
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        1.message组件
+        2.restframework Request对象
       </a>
       
         
@@ -431,22 +445,22 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1.前戏
+    1.前戏：
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3.应用
-  </a>
-  
-    <nav class="md-nav" aria-label="3.应用">
+    <nav class="md-nav" aria-label="1.前戏：">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    3.1 配置
+  <a href="#11-opp" class="md-nav__link">
+    1.1 opp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 分析
   </a>
   
 </li>
@@ -457,8 +471,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4.源码分析
+  <a href="#2" class="md-nav__link">
+    2.源码分析
   </a>
   
 </li>
@@ -467,20 +481,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../requestObj/restframeworkRequestObj/" class="md-nav__link">
-        2.restframework Request对象
-      </a>
     </li>
   
 
@@ -596,22 +596,22 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1.前戏
+    1.前戏：
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3.应用
-  </a>
-  
-    <nav class="md-nav" aria-label="3.应用">
+    <nav class="md-nav" aria-label="1.前戏：">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    3.1 配置
+  <a href="#11-opp" class="md-nav__link">
+    1.1 opp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 分析
   </a>
   
 </li>
@@ -622,8 +622,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4.源码分析
+  <a href="#2" class="md-nav__link">
+    2.源码分析
   </a>
   
 </li>
@@ -642,139 +642,162 @@
                 
 
 
-<h1 id="1message">1.message组件</h1>
-<h3 id="1">1.前戏</h3>
-<p><strong>message组件的应用场景</strong></p>
-<p>HTTP请求是不稳定的短链接</p>
-<p>如果在<strong>重定向到另外一个url</strong>时希 望返回<strong>重定向之前</strong>的请求相关的数据</p>
-<p><img alt="image-20220831162639505" src="../assets/image-20220831162639505.png" /></p>
-<p>message组件在django中是一个app</p>
-<h3 id="3">3.应用</h3>
-<h4 id="31">3.1 配置</h4>
-<p><strong>进行如下配置</strong></p>
-<pre><code class="language-python"># MESSAGE_STORAGE = 'django.contrib.messages.storage.fallback.FallbackStorage'
-# MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-</code></pre>
-<pre><code class="language-python">INSTALLED_APPS = [
-    # 'django.contrib.admin',
-    # 'django.contrib.auth',
-    # 'django.contrib.contenttypes',
-    # 'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    &quot;web.apps.WebConfig&quot;
-]
-</code></pre>
-<pre><code class="language-python">MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'utils.md.AuthMiddleware'
-]
-</code></pre>
-<pre><code class="language-python">TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                # 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
-</code></pre>
-<p><strong>第一种方式</strong></p>
-<pre><code class="language-python">A请求：
-def my_order_cancel(request,pk):
-    messages.add_message(request,messages.SUCCESS,'删除成功1')
-    messages.add_message(request,messages.SUCCESS,'删除成功2')
+<h1 id="2restframework-request">2.restframework Request对象</h1>
+<p>DRF中的request对象是对django中的request对象进行的再次封装</p>
+<h3 id="1">1.前戏：</h3>
+<h4 id="11-opp">1.1 opp</h4>
+<pre><code class="language-python">class Foo(object):
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
 
-    return redirect('my_order_list')
+    def show(self):
+        return 123
 
-B请求：
-def f2(request):
-    from django.contrib.messages.api import get_messages
-        messages = get_messages(request)
-        for obj in messages:
-            print(obj.message)
+    def __getattr__(self,item):
+        print('----&gt;',item)
+        return 999
 </code></pre>
-<p><strong>第二种方式</strong></p>
-<pre><code>A请求：
-def my_order_cancel(request,pk):
-    messages.add_message(request,messages.SUCCESS,'删除成功1')
-    messages.add_message(request,messages.SUCCESS,'删除成功2')
+<p><code>__getattr__</code>方法会在对象调用不存在的成员时触发</p>
+<pre><code class="language-python">class Foo(object):
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
 
-    return redirect('my_order_list')
+    def show(self):
+        return 123
 
-B请求：通过HTML页面
-   &lt;ul&gt;
-        {% for obj in messages %}
-            &lt;li&gt;{{ obj.message }}&lt;/li&gt;
-        {% endfor %}
-    &lt;/ul&gt;
+    def __getattrbute__(self,item):
+        print('----&gt;',item)
+        return 999
 </code></pre>
-<h3 id="4">4.源码分析</h3>
-<p>message是一个对象, 封装特性</p>
-<p>add_message 源代码</p>
-<pre><code class="language-python">def add_message(request, level, message, extra_tags='', fail_silently=False):
-    &quot;&quot;&quot;
-    Attempt to add a message to the request using the 'messages' app.
-    &quot;&quot;&quot;
-    try:
-        messages = request._messages
-    except AttributeError:
-        if not hasattr(request, 'META'):
-            raise TypeError(
-                &quot;add_message() argument must be an HttpRequest object, not &quot;
-                &quot;'%s'.&quot; % request.__class__.__name__
-            )
-        if not fail_silently:
-            raise MessageFailure(
-                'You cannot add messages without installing '
-                'django.contrib.messages.middleware.MessageMiddleware'
-            )
-    else:
-        return messages.add(level, message, extra_tags)
-</code></pre>
-<p>关键的两行代码</p>
-<pre><code class="language-python">try:
-    messages = request._messages
-......
-else:
-    return messages.add(level, message, extra_tags)
-</code></pre>
-<pre><code class="language-python">request._messages 是request对象中的一个成员
+<p><code>__getattrbute__</code>将接管调用的操作，<code>object</code>基类中<code>__getattrbute__</code></p>
+<p>方法定义了基础的成员运算方法</p>
+<p>不论成员/方法是否存在，<code>__getattrbute__</code>都会执行。      </p>
+<p>在基类的<code>__getattrbute__</code>方法中，可以做如下操作</p>
+<ul>
+<li>返回一些值</li>
+<li>
+<p>如果访问不存在的成员时，raise errro</p>
+</li>
+<li>
+<p>其他的处理规则</p>
+</li>
+</ul>
+<h4 id="12">1.2 分析</h4>
+<pre><code class="language-python">class HttpRequest(object):
+    def __init__(self):
+        pass
 
-由MessageMiddleware中间件设置，
-在MessageMiddleware的process_request方法中设置了_messages
+    def v1(self):
+        print('v1')
+
+    def v2(self):
+        print('v2')
+
+class Request(object):
+    def __init__(self,request,xx):
+        self._request = request
+        self.xx = xx
+    # 对象中有的成员，不会出发
+    # 对象中没有的成员，才会触发
+    def __getattr__(self, attr):
+        try:
+            # 对象中没有的成员，去参数中传入的对象找
+            # 这里的寻找方式自定义
+            return getattr(self._request, attr)
+        except AttributeError:
+            return self.__getattribute__(attr)
+
+request = HttpRequest()
+req.v1()
+req.v2()
+
+request. = Request(req,111)
+request.xx
+request._request.v1()
+request._request.v2()
 </code></pre>
-<p><img alt="image-20220831171724428" src="../assets/image-20220831171724428.png" />
-default_storage 是一个类，返回如下内容</p>
-<p><img alt="image-20220831211520601" src="../assets/image-20220831211520601.png" /></p>
-<pre><code>import_string通过字符串形式找类 SessionStorage
-返回一个对象，传入request参数
-    SessionStorage(request)
+<p>前戏结束🎈</p>
+<h3 id="2">2.源码分析</h3>
+<pre><code class="language-python">class request:
+
+    def __init__(self, request, parsers=None, authenticators=None,
+                 negotiator=None, parser_context=None):
+        assert isinstance(request, HttpRequest), (
+            'The `request` argument must be an instance of '
+            '`django.http.HttpRequest`, not `{}.{}`.'
+            .format(request.__class__.__module__, request.__class__.__name__)
+        )
+
+        self._request = request
+        self.parsers = parsers or ()
+        self.authenticators = authenticators or ()
+        self.negotiator = negotiator or self._default_negotiator()
+        self.parser_context = parser_context
+        self._data = Empty
+        self._files = Empty
+        self._full_data = Empty
+        self._content_type = Empty
+        self._stream = Empty
+
+        if self.parser_context is None:
+            self.parser_context = {}
+        self.parser_context['request'] = self
+        self.parser_context['encoding'] = request.encoding or settings.DEFAULT_CHARSET
+
+        force_user = getattr(request, '_force_auth_user', None)
+        force_token = getattr(request, '_force_auth_token', None)
+        if force_user is not None or force_token is not None:
+            forced_auth = ForcedAuthentication(force_user, force_token)
+            self.authenticators = (forced_auth,)
+
+    # 这里的__getattr__方法与前戏中的用法一致        
+    def __getattr__(self, attr):
+        &quot;&quot;&quot;
+        If an attribute does not exist on this instance, then we also attempt
+        to proxy it to the underlying HttpRequest object.
+        &quot;&quot;&quot;
+        try:
+            return getattr(self._request, attr)
+        except AttributeError:
+            return self.__getattribute__(attr)
+
+
+class APIView(View)
+    # dispatch中传入的request对象是django的request对象
+    def dispatch(self, request, *args, **kwargs):
+        &quot;&quot;&quot;
+        `.dispatch()` is pretty much the same as Django's regular dispatch,
+        but with extra hooks for startup, finalize, and exception handling.
+        &quot;&quot;&quot;
+        self.args = args
+        self.kwargs = kwargs
+        # 
+        request = self.initialize_request(request, *args, **kwargs)
+        # 从此开始的request是经过drf封装过后的request
+        self.request = request
+        self.headers = self.default_response_headers  # deprecate?
+
+        try:
+            self.initial(request, *args, **kwargs)
+
+            # Get the appropriate handler method
+            if request.method.lower() in self.http_method_names:
+                # 通过反射获取get/post/put/delete等方法
+                handler = getattr(self, request.method.lower(),
+                                  self.http_method_not_allowed)
+            else:
+                handler = self.http_method_not_allowed
+            # 执行相应的方法
+            response = handler(request, *args, **kwargs)
+
+        except Exception as exc:
+            response = self.handle_exception(exc)
+
+        self.response = self.finalize_response(request, response, *args, **kwargs)
+        return self.response
 </code></pre>
-<p>将SessionStorage(request)对象在中间件MessageMiddleware中的process_request方法</p>
-<p>赋值给了request._messages</p>
-<p><img alt="image-20220831205937106" src="../assets/image-20220831205937106.png" /></p>
-<p>此处的messages是一个对象，SessionStorage的对象</p>
-<p>是因为配置文件中，设置message存放在session中</p>
-<p>在SessionStorage的父类BaseStorage中，存在add方法</p>
-<p><img alt="image-20220831210545991" src="../assets/image-20220831210545991.png" /></p>
-<p><img alt="image-20220831210616109" src="../assets/image-20220831210616109.png" /></p>
-<p><strong>请求流程</strong> </p>
-<p><img alt="image-20220831215918645" src="../assets/image-20220831215918645.png" /></p>
 
 
 
@@ -793,7 +816,7 @@ default_storage 是一个类，返回如下内容</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../hello/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hello" rel="prev">
+        <a href="../../message/message/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1.message组件" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -802,20 +825,20 @@ default_storage 是一个类，返回如下内容</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Hello
+              1.message组件
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../requestObj/restframeworkRequestObj/" class="md-footer__link md-footer__link--next" aria-label="Next: 2.restframework Request对象" rel="next">
+        <a href="../../restframework_authentication/restframework_authentication/" class="md-footer__link md-footer__link--next" aria-label="Next: 3.restframework认证组件" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              2.restframework Request对象
+              3.restframework认证组件
             </div>
           </div>
           <div class="md-footer__button md-icon">
