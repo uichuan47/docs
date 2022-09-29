@@ -23,7 +23,7 @@ nav:
       - Django/restframework_authentication/restframework_authentication.md
       - Django/restframework_permission/restframework_permission.md
       - Django/restframeworkThrottle/restframeworkThrottle.md
-      - Django/drf/day14drf.md
+#      - Django/drf/day14drf.md
 
   - project:
       - project/tables/tables.md
