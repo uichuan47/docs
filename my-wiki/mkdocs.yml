@@ -25,6 +25,9 @@ nav:
       - Django/restframeworkThrottle/restframeworkThrottle.md
 #      - Django/drf/day14drf.md
       - Django/restframework_practice/restframework_blog.md
+      - Django/reatframework_serializer/reatframework_serializer.md
+      - Django/reatframework_serializer_isvalid/reatframework_serializer_isvalid.md
+      - Django/reatframework_version/reatframework_version.md
 
 
   - project:
