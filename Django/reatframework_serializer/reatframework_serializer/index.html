@@ -13,7 +13,7 @@
     
     
       
-        <title>2.restframework Request对象 - My Docs</title>
+        <title>7.restframework序列化 - My Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2restframework-request" class="md-skip">
+        <a href="#7restframework" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.restframework Request对象
+              7.restframework序列化
             
           </span>
         </div>
@@ -422,79 +422,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2.restframework Request对象
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../requestObj/restframeworkRequestObj/" class="md-nav__link">
         2.restframework Request对象
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1.前戏：
-  </a>
-  
-    <nav class="md-nav" aria-label="1.前戏：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-opp" class="md-nav__link">
-    1.1 opp
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    1.2 分析
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.源码分析
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -560,11 +492,94 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../reatframework_serializer/reatframework_serializer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          7.restframework序列化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         7.restframework序列化
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.序列化器的简单实用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 对多个对象的序列化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3modelserializer" class="md-nav__link">
+    3.ModelSerializer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4source" class="md-nav__link">
+    4.source &amp; 时间格式化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 序列化自定义方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6.序列化类嵌套
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7.序列化类继承
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -680,34 +695,49 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1.前戏：
+    1.序列化器的简单实用
   </a>
-  
-    <nav class="md-nav" aria-label="1.前戏：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-opp" class="md-nav__link">
-    1.1 opp
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    1.2 分析
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    2.源码分析
+    2. 对多个对象的序列化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3modelserializer" class="md-nav__link">
+    3.ModelSerializer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4source" class="md-nav__link">
+    4.source &amp; 时间格式化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 序列化自定义方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6.序列化类嵌套
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7.序列化类继承
   </a>
   
 </li>
@@ -726,161 +756,214 @@
                 
 
 
-<h1 id="2restframework-request">2.restframework Request对象</h1>
-<p>DRF中的request对象是对django中的request对象进行的再次封装</p>
-<h3 id="1">1.前戏：</h3>
-<h4 id="11-opp">1.1 opp</h4>
-<pre><code class="language-python">class Foo(object):
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-
-    def show(self):
-        return 123
-
-    def __getattr__(self,item):
-        print('----&gt;',item)
-        return 999
-</code></pre>
-<p><code>__getattr__</code>方法会在对象调用不存在的成员时触发</p>
-<pre><code class="language-python">class Foo(object):
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-
-    def show(self):
-        return 123
-
-    def __getattrbute__(self,item):
-        print('----&gt;',item)
-        return 999
-</code></pre>
-<p><code>__getattrbute__</code>将接管调用的操作，<code>object</code>基类中<code>__getattrbute__</code></p>
-<p>方法定义了基础的成员运算方法</p>
-<p>不论成员/方法是否存在，<code>__getattrbute__</code>都会执行。      </p>
-<p>在基类的<code>__getattrbute__</code>方法中，可以做如下操作</p>
+<h1 id="7restframework">7.restframework序列化</h1>
+<p>序列化器有两个功能</p>
 <ul>
-<li>返回一些值</li>
-<li>
-<p>如果访问不存在的成员时，raise errro</p>
-</li>
-<li>
-<p>其他的处理规则</p>
-</li>
+<li>数据校验</li>
+<li>序列化</li>
 </ul>
-<h4 id="12">1.2 分析</h4>
-<pre><code class="language-python">class HttpRequest(object):
-    def __init__(self):
-        pass
+<h3 id="1">1.序列化器的简单实用</h3>
+<p>序列化器将django通过orm操作从数据库中取得的数据做序列化操作转换为Json数据</p>
+<p><strong>需要编写序列化类</strong></p>
+<pre><code class="language-python">from api import models
+from rest_framework import serializers
 
-    def v1(self):
-        print('v1')
 
-    def v2(self):
-        print('v2')
-
-class Request(object):
-    def __init__(self,request,xx):
-        self._request = request
-        self.xx = xx
-    # 对象中有的成员，不会出发
-    # 对象中没有的成员，才会触发
-    def __getattr__(self, attr):
-        try:
-            # 对象中没有的成员，去参数中传入的对象找
-            # 这里的寻找方式自定义
-            return getattr(self._request, attr)
-        except AttributeError:
-            return self.__getattribute__(attr)
-
-request = HttpRequest()
-req.v1()
-req.v2()
-
-request. = Request(req,111)
-request.xx
-request._request.v1()
-request._request.v2()
+class DepartSerializer(serializers.Serializer):
+    title = serializers.CharField()
+    count = serializers.IntegerField()
 </code></pre>
-<p>前戏结束🎈</p>
-<h3 id="2">2.源码分析</h3>
-<pre><code class="language-python">class request:
+<p>并且在<strong>视图函数中应用</strong>，实例化<code>DepartSerializer</code>对象并且传入通过ORM查询得到的对象<code>QueryDict</code></p>
+<pre><code class="language-python">class DepartView(APIView):
+    def get(self, request, *args, **kwargs):
+        depart_object = models.Depart.objects.all().first()
+        ser = DepartSerializer(instance=depart_object)
+        print(ser.data)
 
-    def __init__(self, request, parsers=None, authenticators=None,
-                 negotiator=None, parser_context=None):
-        assert isinstance(request, HttpRequest), (
-            'The `request` argument must be an instance of '
-            '`django.http.HttpRequest`, not `{}.{}`.'
-            .format(request.__class__.__module__, request.__class__.__name__)
-        )
-
-        self._request = request
-        self.parsers = parsers or ()
-        self.authenticators = authenticators or ()
-        self.negotiator = negotiator or self._default_negotiator()
-        self.parser_context = parser_context
-        self._data = Empty
-        self._files = Empty
-        self._full_data = Empty
-        self._content_type = Empty
-        self._stream = Empty
-
-        if self.parser_context is None:
-            self.parser_context = {}
-        self.parser_context['request'] = self
-        self.parser_context['encoding'] = request.encoding or settings.DEFAULT_CHARSET
-
-        force_user = getattr(request, '_force_auth_user', None)
-        force_token = getattr(request, '_force_auth_token', None)
-        if force_user is not None or force_token is not None:
-            forced_auth = ForcedAuthentication(force_user, force_token)
-            self.authenticators = (forced_auth,)
-
-    # 这里的__getattr__方法与前戏中的用法一致        
-    def __getattr__(self, attr):
-        &quot;&quot;&quot;
-        If an attribute does not exist on this instance, then we also attempt
-        to proxy it to the underlying HttpRequest object.
-        &quot;&quot;&quot;
-        try:
-            return getattr(self._request, attr)
-        except AttributeError:
-            return self.__getattribute__(attr)
+        return Response(ser.data)
+</code></pre>
+<p><strong>在postman中测试</strong></p>
+<p><img alt="image-20220922202459124" src="../assets/image-20220922202459124.png" /></p>
+<p>序列化器成功得到数据，并且返回给接口Json数据</p>
+<p><img alt="image-20220922202544076" src="../assets/image-20220922202544076.png" /></p>
+<p>注意⚠️：</p>
+<ul>
+<li>在序列化器类中的字段名应该与ORM中的字段名保持一致</li>
+<li>同时数据类型<code>field</code>也要保持一致</li>
+</ul>
+<h3 id="2">2. 对多个对象的序列化</h3>
+<p>视图函数中的序列化器的对象在生成时需要添加一个参数<code>many=True</code></p>
+<p>此时，models接收的对象应该是多个，放在一个列表中</p>
+<pre><code>[obj1,obj2,obj3,....]
+</code></pre>
+<p>用单个对象接收就不太合适了，这里用<code>queryset</code>来接收</p>
+<pre><code class="language-python"># queryset = [obj1,obj2,obj3,....]
+queryset = models.Depart.objects.all()
+</code></pre>
+<pre><code class="language-python">from rest_framework.views import APIView
+from rest_framework.response import Response
+from api import models
+from rest_framework import serializers
 
 
-class APIView(View)
-    # dispatch中传入的request对象是django的request对象
-    def dispatch(self, request, *args, **kwargs):
-        &quot;&quot;&quot;
-        `.dispatch()` is pretty much the same as Django's regular dispatch,
-        but with extra hooks for startup, finalize, and exception handling.
-        &quot;&quot;&quot;
-        self.args = args
-        self.kwargs = kwargs
-        # 
-        request = self.initialize_request(request, *args, **kwargs)
-        # 从此开始的request是经过drf封装过后的request
-        self.request = request
-        self.headers = self.default_response_headers  # deprecate?
+class DepartSerializer(serializers.Serializer):
+    title = serializers.CharField()
+    count = serializers.IntegerField()
 
-        try:
-            self.initial(request, *args, **kwargs)
 
-            # Get the appropriate handler method
-            if request.method.lower() in self.http_method_names:
-                # 通过反射获取get/post/put/delete等方法
-                handler = getattr(self, request.method.lower(),
-                                  self.http_method_not_allowed)
-            else:
-                handler = self.http_method_not_allowed
-            # 执行相应的方法
-            response = handler(request, *args, **kwargs)
+class DepartView(APIView):
+    def get(self, request, *args, **kwargs):
+        queryset = models.Depart.objects.all()
+        ser = DepartSerializer(instance=queryset, many=True)
+        print(ser.data)
+        context = {&quot;status&quot;: True, &quot;data&quot;: ser.data}
+        return Response(context)
+</code></pre>
+<p>Postman中的测试结果：</p>
+<p><img alt="image-20220922203503356" src="../assets/image-20220922203503356.png" /></p>
+<h3 id="3modelserializer">3.ModelSerializer</h3>
+<pre><code class="language-python">class DepartSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Depart
+        fields = &quot;__all__&quot;
+</code></pre>
+<p>更加轻松的方式，类似<code>ModelForm</code>的原理</p>
+<p>在postman中的测试结果：</p>
+<p>所有数据字段都可以被序列化</p>
+<p><img alt="image-20220922204139319" src="../assets/image-20220922204139319.png" /></p>
+<h3 id="4source">4.source &amp; 时间格式化</h3>
+<pre><code class="language-python">class UserSerializer(serializers.ModelSerializer):
+    xx = serializers.CharField(source='get_gender_display')
+    depart = serializers.CharField(source='depart.title')
+    ctime = serializers.DateTimeField(format=&quot;%Y-%m-%d&quot;)
 
-        except Exception as exc:
-            response = self.handle_exception(exc)
+    class Meta:
+        model = models.UserInfo
+        # fields = &quot;__all__&quot;
+        fields = ['name', 'age', 'xx', 'depart', 'ctime']
+</code></pre>
+<p>source去数据库中寻找到对应字段，<code>new_name</code>作为返回的Json中的数据的键名 </p>
+<pre><code class="language-python">class UserView(APIView):
+    def get(self, request, *args, **kwargs):
+        models.UserInfo.objects.all().update(ctime=datetime.datetime.now())
+        queryset = models.UserInfo.objects.all()
 
-        self.response = self.finalize_response(request, response, *args, **kwargs)
-        return self.response
+        ser = UserSerializer(instance=queryset, many=True)
+
+        context = {&quot;status&quot;: True, &quot;data&quot;: ser.data}
+        return Response(context)
+</code></pre>
+<p>在postman中的测试结果：</p>
+<p><img alt="image-20220922224806743" src="../assets/image-20220922224806743.png" /></p>
+<h3 id="5">5. 序列化自定义方法</h3>
+<p>在<code>serializers</code>字段中自定义<code>SerializerMethodField()</code></p>
+<p>并且定义函数（类似与钩子）</p>
+<pre><code class="language-python">def get_xxx(self, obj):
+    return '这里是自定义方法'
+</code></pre>
+<pre><code class="language-python">class UserSerializer(serializers.ModelSerializer):
+    xx = serializers.CharField(source='get_gender_display')
+    depart = serializers.CharField(source='depart.title')
+    ctime = serializers.DateTimeField(format=&quot;%Y-%m-%d&quot;)
+    xxx = serializers.SerializerMethodField()
+
+    class Meta:
+        model = models.UserInfo
+        # fields = &quot;__all__&quot;
+        fields = ['name', 'age', 'xx', 'depart', 'ctime', 'xxx']
+
+    def get_xxx(self, obj):
+        return '这里是自定义方法'
+</code></pre>
+<p><img alt="image-20220922225301992" src="../assets/image-20220922225301992.png" /></p>
+<h3 id="6">6.序列化类嵌套</h3>
+<p>主要是ORM类中对应的<code>ForeignKey</code>和<code>ManagToManyField</code>字段进行序列化</p>
+<ul>
+<li>基于<code>SerializerMethodField</code>自定义方法对关联数据进行序列化</li>
+<li>基于嵌套类的序列化</li>
+</ul>
+<pre><code class="language-python">from django.db import models
+
+
+class Role(models.Model):
+    title = models.CharField(verbose_name=&quot;标题&quot;, max_length=32)
+    order = models.IntegerField(verbose_name=&quot;顺序&quot;)
+
+
+class Tag(models.Model):
+    caption = models.CharField(verbose_name=&quot;名称&quot;, max_length=32)
+
+
+class UserInfo(models.Model):
+    name = models.CharField(verbose_name=&quot;姓名&quot;, max_length=32)
+    gender = models.SmallIntegerField(verbose_name=&quot;性别&quot;, choices=((1, &quot;男&quot;), (2, &quot;女&quot;)))
+    role = models.ForeignKey(verbose_name=&quot;角色&quot;, to=&quot;Role&quot;, on_delete=models.CASCADE)
+    ctime = models.DateTimeField(verbose_name=&quot;创建时间&quot;, auto_now_add=True)
+
+    tags = models.ManyToManyField(verbose_name=&quot;标签&quot;, to=&quot;Tag&quot;)
+</code></pre>
+<pre><code class="language-python">from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import serializers
+from api import models
+
+
+class RoleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Role
+        # fields = &quot;__all__&quot;
+        fields = [&quot;id&quot;, 'title']
+
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Tag
+        fields = &quot;__all__&quot;
+
+
+class InfoSerializer(serializers.ModelSerializer):
+    role = RoleSerializer()
+    tags = TagSerializer(many=True)
+
+    class Meta:
+        model = models.UserInfo
+        fields = ['id', 'name', &quot;role&quot;, &quot;tags&quot;]
+
+
+class InfoView(APIView):
+    def get(self, request):
+        queryset = models.UserInfo.objects.all()
+        ser = InfoSerializer(instance=queryset, many=True)
+        print(type(ser.data), ser.data)
+        return Response(ser.data)
+</code></pre>
+<h3 id="7">7.序列化类继承</h3>
+<pre><code class="language-python">from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import serializers
+from api import models
+
+
+class MySerializer(serializers.Serializer):
+    more = serializers.SerializerMethodField()
+
+    def get_more(self, obj):
+        return &quot;123&quot;
+
+
+class InfoSerializer(serializers.ModelSerializer, MySerializer):
+    class Meta:
+        model = models.UserInfo
+        fields = [&quot;id&quot;, &quot;name&quot;, 'more']
+
+
+class InfoView(APIView):
+    def get(self, request):
+        instance = models.UserInfo.objects.all().first()
+        ser = InfoSerializer(instance=instance, many=False)
+
+        print(type(ser.data), ser.data)
+        return Response(ser.data)
 </code></pre>
 
 
@@ -900,7 +983,7 @@ class APIView(View)
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../message/message/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1.message组件" rel="prev">
+        <a href="../../restframework_practice/restframework_blog/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6.restframework：blog" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -909,20 +992,20 @@ class APIView(View)
               <span class="md-footer__direction">
                 Previous
               </span>
-              1.message组件
+              6.restframework：blog
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../restframework_authentication/restframework_authentication/" class="md-footer__link md-footer__link--next" aria-label="Next: 3.restframework认证组件" rel="next">
+        <a href="../../reatframework_serializer_isvalid/reatframework_serializer_isvalid/" class="md-footer__link md-footer__link--next" aria-label="Next: 8.restframework数据校验" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              3.restframework认证组件
+              8.restframework数据校验
             </div>
           </div>
           <div class="md-footer__button md-icon">
