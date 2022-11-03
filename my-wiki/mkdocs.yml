@@ -17,6 +17,7 @@ nav:
       - Dev_documents/oppProgramming/opp.md
       - Dev_documents/java/meetJava.md
       - Dev_documents/javaGUI/javaGUI.md
+      - Dev_documents/javaGUIhomework/javaGUIhomework.md
   - Django:
       - Django/hello.md
       - Django/message/message.md
