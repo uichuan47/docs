@@ -6,7 +6,7 @@
 
 **Frame**
 
-- 弹出一个窗口
+- 弹出一个窗口。
 
 ```java
 package uichuan;

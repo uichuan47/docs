@@ -1,4 +1,4 @@
-# Java GUI作业
+# 12.Java GUI作业
 
 ```
 - Frame窗口 ---> BoderLayout --> center 放置一个面板Panel Container
