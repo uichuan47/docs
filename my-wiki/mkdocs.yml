@@ -34,6 +34,7 @@ nav:
       - Django/django_Jsonresponse/django_Jsonresponse.md
       - Django/django_QueryDict/django_QueryDict.md
       - Django/django_request/django_request.md
+      - Django/metaClass/metaClass.md
 
 
   - project:
