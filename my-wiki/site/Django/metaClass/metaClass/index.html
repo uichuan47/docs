@@ -13,7 +13,7 @@
     
     
       
-        <title>12.DjangoQueryDict对象 - My Docs</title>
+        <title>14.metaclass元类 - My Docs</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#12djangoquerydict" class="md-skip">
+        <a href="#14metaclass" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12.DjangoQueryDict对象
+              14.metaclass元类
             
           </span>
         </div>
@@ -590,199 +590,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          12.DjangoQueryDict对象
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../django_QueryDict/django_QueryDict/" class="md-nav__link">
         12.DjangoQueryDict对象
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1querydict__init__query_stringnonemutablefalseencodingnone" class="md-nav__link">
-    1.QueryDict.__init__(query_string=None,mutable=False,encoding=None)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2querydict__getitem__key" class="md-nav__link">
-    2.QueryDict.__getitem__(key)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3querydict__setitem__keyvalue" class="md-nav__link">
-    3.QueryDict.__setitem__(key,value)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4querydictcontainskey" class="md-nav__link">
-    4.QueryDict.contains(key)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5querydictgetkeydefault" class="md-nav__link">
-    5.QueryDict.get(key,default)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6querydictsetdefaultkeydefault" class="md-nav__link">
-    6.QueryDict.setdefault(key,default)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7querydictupdateother_dict" class="md-nav__link">
-    7.QueryDict.update(other_dict)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8querydictitems" class="md-nav__link">
-    8.QueryDict.items()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9querydictiteritems" class="md-nav__link">
-    9.QueryDict.iteritems()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10querydictiterlists" class="md-nav__link">
-    10.QueryDict.iterlists()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11querydictvalues" class="md-nav__link">
-    11.QueryDict.values()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12querydictitervalues" class="md-nav__link">
-    12.QueryDict.itervalues()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13querydictcopy" class="md-nav__link">
-    13.QueryDict.copy()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#14querydictgetlistkey-default" class="md-nav__link">
-    14.QueryDict.getlist(key, default)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#15querydictsetlistkey-list_" class="md-nav__link">
-    15.QueryDict.setlist(key, list_)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#16querydictappendlistkey-item" class="md-nav__link">
-    16.QueryDict.appendlist(key, item)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#17querydictsetlistdefaultkey-default_list" class="md-nav__link">
-    17.QueryDict.setlistdefault(key, default_list)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#18querydictlists" class="md-nav__link">
-    18.QueryDict.lists()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#19querydictpopkey" class="md-nav__link">
-    19.QueryDict.pop(key)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#20querydictpopitem" class="md-nav__link">
-    20.QueryDict.popitem()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#21querydictdict" class="md-nav__link">
-    21.QueryDict.dict()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#22querydicturlencodesafe" class="md-nav__link">
-    22.QueryDict.urlencode([safe])
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -806,11 +618,79 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../metaClass/metaClass/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          14.metaclass元类
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         14.metaclass元类
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.前戏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-metaclass" class="md-nav__link">
+    2. metaclass
+  </a>
+  
+    <nav class="md-nav" aria-label="2. metaclass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-metaclass" class="md-nav__link">
+    2.1 指定元类(metaclass)来创建类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mytype" class="md-nav__link">
+    2.2 在MyType元类中自定义类变量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -945,156 +825,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1querydict__init__query_stringnonemutablefalseencodingnone" class="md-nav__link">
-    1.QueryDict.__init__(query_string=None,mutable=False,encoding=None)
+  <a href="#1" class="md-nav__link">
+    1.前戏
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2querydict__getitem__key" class="md-nav__link">
-    2.QueryDict.__getitem__(key)
+  <a href="#2-metaclass" class="md-nav__link">
+    2. metaclass
+  </a>
+  
+    <nav class="md-nav" aria-label="2. metaclass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-metaclass" class="md-nav__link">
+    2.1 指定元类(metaclass)来创建类
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3querydict__setitem__keyvalue" class="md-nav__link">
-    3.QueryDict.__setitem__(key,value)
+        
+          <li class="md-nav__item">
+  <a href="#22-mytype" class="md-nav__link">
+    2.2 在MyType元类中自定义类变量
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4querydictcontainskey" class="md-nav__link">
-    4.QueryDict.contains(key)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5querydictgetkeydefault" class="md-nav__link">
-    5.QueryDict.get(key,default)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6querydictsetdefaultkeydefault" class="md-nav__link">
-    6.QueryDict.setdefault(key,default)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7querydictupdateother_dict" class="md-nav__link">
-    7.QueryDict.update(other_dict)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8querydictitems" class="md-nav__link">
-    8.QueryDict.items()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9querydictiteritems" class="md-nav__link">
-    9.QueryDict.iteritems()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10querydictiterlists" class="md-nav__link">
-    10.QueryDict.iterlists()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11querydictvalues" class="md-nav__link">
-    11.QueryDict.values()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12querydictitervalues" class="md-nav__link">
-    12.QueryDict.itervalues()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13querydictcopy" class="md-nav__link">
-    13.QueryDict.copy()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#14querydictgetlistkey-default" class="md-nav__link">
-    14.QueryDict.getlist(key, default)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#15querydictsetlistkey-list_" class="md-nav__link">
-    15.QueryDict.setlist(key, list_)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#16querydictappendlistkey-item" class="md-nav__link">
-    16.QueryDict.appendlist(key, item)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#17querydictsetlistdefaultkey-default_list" class="md-nav__link">
-    17.QueryDict.setlistdefault(key, default_list)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#18querydictlists" class="md-nav__link">
-    18.QueryDict.lists()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#19querydictpopkey" class="md-nav__link">
-    19.QueryDict.pop(key)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#20querydictpopitem" class="md-nav__link">
-    20.QueryDict.popitem()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#21querydictdict" class="md-nav__link">
-    21.QueryDict.dict()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#22querydicturlencodesafe" class="md-nav__link">
-    22.QueryDict.urlencode([safe])
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1112,140 +872,92 @@
                 
 
 
-<h1 id="12djangoquerydict">12.DjangoQueryDict对象</h1>
-<p><a href="https://docs.djangoproject.com/zh-hans/3.2/ref/request-response/#querydict-objects">官方文档🎈</a></p>
-<p>在 <code>HttpRequest</code> 对象中,属性 GET 和 POST 得到的都是 <code>django.http.QueryDict</code> 所创建的实例。</p>
-<p>这是一个 django 自定义的类似字典的类，用来处理同一个键带多个值的情况。</p>
-<pre><code class="language-python">def welcome(request):
-    # current_name = request.resolver_match.url_name
-    print(type(request.GET),request.GET)
+<h1 id="14metaclass">14.metaclass元类</h1>
+<h3 id="1">1.前戏</h3>
+<p>对象是类实例化的结果</p>
+<pre><code class="language-python">class Foo(object):
+    pass
+
+# 第1步：调用Foo的__new__方法创建空对象。
+# 第2步：调用Foo的__init__方法对对象进行初始化。
+obj = Foo()
 </code></pre>
-<pre><code>&lt;class 'django.http.request.QueryDict'&gt; &lt;QueryDict: {}&gt;
-[13/Sep/2022 01:26:20] &quot;GET /login/ HTTP/1.1&quot; 200 133
+<p>类在默认情况下是由type创建出来的</p>
+<pre><code class="language-python">class Foo(object):
+    v1 = 123
+
+    def func(self):
+        return 69
 </code></pre>
-<p><strong>QueryDict继承Python 的Dict，拓展了Python字典的一些功能</strong></p>
-<p>在 python 原始的字典中，当一个键出现多个值的时候会发生冲突，只保留最后一个值。</p>
-<p>而在 HTML 表单中，通常会发生一个键有多个值的情况，例如 <code>&lt;select multiple&gt;</code> （多选框）就是一个很常见情况。</p>
-<h4 id="1querydict__init__query_stringnonemutablefalseencodingnone">1.QueryDict.<code>__init__</code>(query_string=None,mutable=False,encoding=None)</h4>
-<p>这是一个构造函数，其中<code>query_string</code>需要一个字符串</p>
-<p><strong>QueryDict源码</strong> 其中的init初始化方法</p>
-<pre><code class="language-python">    def __init__(self, query_string=None, mutable=False, encoding=None):
-        super().__init__()
-        self.encoding = encoding or settings.DEFAULT_CHARSET
-        query_string = query_string or ''
-        parse_qsl_kwargs = {
-            'keep_blank_values': True,
-            'encoding': self.encoding,
-            'max_num_fields': settings.DATA_UPLOAD_MAX_NUMBER_FIELDS,
-        }
-        if isinstance(query_string, bytes):
-            # query_string normally contains URL-encoded data, a subset of ASCII.
-            try:
-                query_string = query_string.decode(self.encoding)
-            except UnicodeDecodeError:
-                # ... but some user agents are misbehaving :-(
-                query_string = query_string.decode('iso-8859-1')
-        try:
-            for key, value in parse_qsl(query_string, **parse_qsl_kwargs):
-                self.appendlist(key, value)
-        except ValueError as e:
-            # ValueError can also be raised if the strict_parsing argument to
-            # parse_qsl() is True. As that is not used by Django, assume that
-            # the exception was raised by exceeding the value of max_num_fields
-            # instead of fragile checks of exception message strings.
-            raise TooManyFieldsSent(
-                'The number of GET/POST parameters exceeded '
-                'settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.'
-            ) from e
-        self._mutable = mutable
+<pre><code class="language-python">Foo = type(&quot;Foo&quot;,(object,),{&quot;v1&quot;:123,&quot;func&quot;:lambda self:69})
 </code></pre>
-<h4 id="2querydict__getitem__key">2.QueryDict.<code>__getitem__</code>(key)</h4>
-<p>返回给出的key的<strong>值</strong>，如果具有多个值，则getitem返回最后（最新）的值，</p>
-<p>key不存在，raise <code>django.utils.datastructures.MultiValueDictKeyError</code></p>
-<p>Python KeyError的子类，所以可以捕获<strong>KeyError</strong></p>
-<h4 id="3querydict__setitem__keyvalue">3.QueryDict.<code>__setitem__</code>(key,value)</h4>
-<p>设置给出的key的值为value（一个列表，只有一个元素）</p>
-<h4 id="4querydictcontainskey">4.QueryDict.contains(key)</h4>
-<p>如果key存在，返回True</p>
-<h4 id="5querydictgetkeydefault">5.QueryDict.get(key,default)</h4>
-<p>与getitem类似，不同点是key不存在时，返回一个默认值</p>
-<h4 id="6querydictsetdefaultkeydefault">6.QueryDict.setdefault(key,default)</h4>
-<p>类似标准字典的<code>setdefault()</code> 方法，只是它在内部使用的是<code>__setitem__()</code>。</p>
-<p>也就是说，当key已经存在时，返回其值，key不存在时，返回default，同时添加 key 和 default到对象中。</p>
-<h4 id="7querydictupdateother_dict">7.QueryDict.update(other_dict)</h4>
-<p>接受一个QueryDict或标准python字典，类似标准字典的update()方法</p>
-<p>它附加到当前字典项的后面</p>
-<h4 id="8querydictitems"><strong>8.QueryDict.items()</strong></h4>
-<p>类似标准字典的<code>items()</code> 方法，返回一个由键值组成的元祖的列表。但是它使用的是和<code>__getitem__</code> 一样返回最新的值的逻辑。</p>
-<p>例如：</p>
-<pre><code>&gt;&gt;&gt; q = QueryDict('a=1&amp;a=2&amp;a=3')
-&gt;&gt;&gt; q.items()
-[('a', '3')]
+<p>这两种情况创建类，是完全等价的</p>
+<h3 id="2-metaclass">2. metaclass</h3>
+<p>在定义类时加入metaclass指定当前类的创造者</p>
+<p>默认情况下，metaclass=type</p>
+<pre><code class="language-python"># 由type创建Foo类型
+class Foo(object):
+    pass
 </code></pre>
-<h4 id="9querydictiteritems"><strong>9.QueryDict.iteritems()</strong></h4>
-<p>类似标准字典的<code>iteritems()</code> 方法，返回一个迭代对象。类似 <code>QueryDict.items()</code>，它使用的是和<code>QueryDict.__getitem__()</code> 一样的返回最新的值的逻辑。</p>
-<h4 id="10querydictiterlists"><strong>10.QueryDict.iterlists()</strong></h4>
-<p>类似<code>QueryDict.iteritems()</code>，返回一个包含键值对的元祖(key, value)迭代对象 ，value 是一个包括所有 key 的值的列表。</p>
-<h4 id="11querydictvalues"><strong>11.QueryDict.values()</strong></h4>
-<p>类似标准字典的<code>values()</code> 方法，但是它使用的是和<code>__getitem__</code> 一样返回最新的值的逻辑。也就是返回一个所有键对应的最新值的列表。</p>
-<p>例如：</p>
-<pre><code>&gt;&gt;&gt; q = QueryDict('a=1&amp;a=2&amp;a=3')
-&gt;&gt;&gt; q.values()
-['3']
+<pre><code class="language-python"># 由MyType创建Foo类型
+class Foo(object,metaclass=MyType):
+    pass
 </code></pre>
-<h4 id="12querydictitervalues"><strong>12.QueryDict.itervalues()</strong></h4>
-<p>类似<code>QueryDict.values()</code>，只是它返回的是一个迭代器。</p>
-<h4 id="13querydictcopy"><strong>13.QueryDict.copy()</strong></h4>
-<p>返回对象的副本，使用Python 标准库中的<code>copy.deepcopy()</code>。此副本是可变的即使原始对象是不可变的。</p>
-<h4 id="14querydictgetlistkey-default"><strong>14.QueryDict.getlist(key, default)</strong></h4>
-<p>以Python 列表形式返回所请求的键的数据。如果键不存在并且没有提供默认值，则返回空列表。它保证返回的是某种类型的列表，除非默认值不是列表。</p>
-<h4 id="15querydictsetlistkey-list_"><strong>15.QueryDict.setlist(key, list_)</strong></h4>
-<p>为给定的键设置<code>list_</code>（与<code>__setitem__()</code> 不同)，可以设置一个多元素的列表。</p>
-<h4 id="16querydictappendlistkey-item"><strong>16.QueryDict.appendlist(key, item)</strong></h4>
-<p>将项追加到内部与键相关联的列表中。</p>
-<h4 id="17querydictsetlistdefaultkey-default_list"><strong>17.QueryDict.setlistdefault(key, default_list)</strong></h4>
-<p>类似<code>setdefault</code>，除了它接受一个列表而不是单个值。</p>
-<h4 id="18querydictlists"><strong>18.QueryDict.lists()</strong></h4>
-<p>类似<code>items</code>，只是它将字典中的每个成员作为列表。也就是说，列表中的每个元素，都是由键和对应的值列表组成的二元元祖。</p>
-<p>例如：</p>
-<pre><code>&gt;&gt;&gt; q = QueryDict('a=1&amp;a=2&amp;a=3')
-&gt;&gt;&gt; q.lists()
-[('a', ['1', '2', '3'])]
+<h4 id="21-metaclass">2.1 指定元类(metaclass)来创建类</h4>
+<pre><code class="language-python">class MyType(type):
+    def __init__(cls, *args, **kwargs):
+        print(&quot;第2步：初始化类成员：&quot;, args, **kwargs)
+        super().__init__(*args, **kwargs)
+
+    def __new__(cls, *args, **kwargs):
+        new_cls = super().__new__(cls, *args, **kwargs)
+        print(&quot;第1步：创建类：&quot;, new_cls)
+        return new_cls
+
+    def __call__(cls, *args, **kwargs):
+        print(&quot;第3步：创建对象&amp;初始化对象&quot;, cls)
+
+        # 1.调用自己那个类的 __new__ 方法去创建对象
+        new_object = cls.__new__(cls, *args, **kwargs)
+
+        # 2.调用你自己那个类 __init__放发去初始化
+        cls.__init__(new_object, *args, **kwargs)
+        return new_object
+
+
+class Foo(metaclass=MyType):
+    v1 = 123
+
+    def func(self):
+        pass
+
+
+obj = Foo()
 </code></pre>
-<h4 id="19querydictpopkey"><strong>19.QueryDict.pop(key)</strong></h4>
-<p>返回给定键的值的<strong>列表</strong>，并从字典中移除它们。如果键不存在，将引发<code>KeyError</code>。</p>
-<p>例如 ︰</p>
-<pre><code>&gt;&gt;&gt; q = QueryDict('a=1&amp;a=2&amp;a=3', mutable=True)
-&gt;&gt;&gt; q.pop('a')
-['1', '2', '3']
+<h4 id="22-mytype">2.2 在MyType元类中自定义类变量</h4>
+<pre><code class="language-python">class MyType(type):
+    def __new__(cls, name, bases, attrs):
+        # print(name, bases, attrs)
+        del attrs['v1']
+        attrs['dex'] = &quot;xxxx&quot;
+        xx = super().__new__(cls, name, bases, attrs)
+        return xx
+
+
+# Foo = MyType(&quot;Foo&quot;, (object,), {&quot;v1&quot;: 123, &quot;func&quot;: lambda self: 999})
+class Foo(object, metaclass=MyType):
+    v1 = 123
+
+    def func(self):
+        pass
+
+
+print(Foo.func)
+print(Foo.dex)
 </code></pre>
-<h4 id="20querydictpopitem"><strong>20.QueryDict.popitem()</strong></h4>
-<p>删除字典<strong>任意</strong>一个成员（因为没有顺序的概念），并返回二值元组，包含键和键的所有值的列表。在一个空的字典上调用时将引发<code>KeyError</code>。</p>
-<p>例如 ︰</p>
-<pre><code>&gt;&gt;&gt; q = QueryDict('a=1&amp;a=2&amp;a=3', mutable=True)
-&gt;&gt;&gt; q.popitem()
-('a', ['1', '2', '3'])
-</code></pre>
-<h4 id="21querydictdict"><strong>21.QueryDict.dict()</strong></h4>
-<p>返回<code>QueryDict</code> 的<code>dict</code> 表示形式。对于<code>QueryDict</code> 中的每个(key, list)对 ，<code>dict</code> 将有(key, item) 对，其中item 是列表中的一个元素，使用与<code>QueryDict.__getitem__()</code>相同的逻辑，也就是最新的：</p>
-<pre><code>&gt;&gt;&gt; q = QueryDict('a=1&amp;a=3&amp;a=5')
-&gt;&gt;&gt; q.dict()
-{'a': '5'}
-</code></pre>
-<h4 id="22querydicturlencodesafe"><strong>22.QueryDict.urlencode([safe])</strong></h4>
-<p>从数据中返回查询字符串格式。</p>
-<p>例如：</p>
-<pre><code>&gt;&gt;&gt; q = QueryDict('a=2&amp;b=3&amp;b=5')
-&gt;&gt;&gt; q.urlencode()
-'a=2&amp;b=3&amp;b=5'
-</code></pre>
-<p>可选地，urlencode 可以传递不需要编码的字符。（这意味着要进行 url 编码）</p>
-<p>例如︰</p>
-<pre><code>&gt;&gt;&gt; q = QueryDict(mutable=True)
-&gt;&gt;&gt; q['next'] = '/a&amp;b/'
-&gt;&gt;&gt; q.urlencode(safe='/')
-'next=/a%26b/'
-</code></pre>
+<blockquote>
+<p>元类在DjangoRestframework序列化器有应用。</p>
+</blockquote>
 
 
 
@@ -1264,7 +976,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../django_Jsonresponse/django_Jsonresponse/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 11.JsonResponse对象" rel="prev">
+        <a href="../../django_request/django_request/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 13.djangoRequest对象" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1273,20 +985,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              11.JsonResponse对象
+              13.djangoRequest对象
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../django_request/django_request/" class="md-footer__link md-footer__link--next" aria-label="Next: 13.djangoRequest对象" rel="next">
+        <a href="../../../project/tables/tables/" class="md-footer__link md-footer__link--next" aria-label="Next: 1.表结构设计测试（v1）" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              13.djangoRequest对象
+              1.表结构设计测试（v1）
             </div>
           </div>
           <div class="md-footer__button md-icon">
